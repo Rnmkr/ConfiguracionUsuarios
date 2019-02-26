@@ -38,5 +38,12 @@ namespace ConfiguracionUsuarios
             epw.Owner = this;
             epw.ShowDialog();
         }
+
+        private void btnAsignarAccesos_Click(object sender, RoutedEventArgs e)
+        {
+            AsignacionAccesoWindow aw = new AsignacionAccesoWindow();
+            aw.Owner = this;
+            aw.ShowDialog();
+        }
     }
 }

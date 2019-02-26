@@ -65,6 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AsignacionAccesoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EdicionPermisosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AsignacionAccesoWindow.xaml.cs">
+      <DependentUpon>AsignacionAccesoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\Aplicacion.cs" />
     <Compile Include="DataAccessLayer\Contraseña.cs" />
