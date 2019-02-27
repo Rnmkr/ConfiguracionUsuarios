@@ -81,14 +81,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataAccessLayer\Aplicacion.cs" />
+    <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
     <Compile Include="DataAccessLayer\DBContext.cs" />
-    <Compile Include="DataAccessLayer\Password.cs" />
-    <Compile Include="DataAccessLayer\Permiso.cs" />
-    <Compile Include="DataAccessLayer\PermisoUsuario.cs" />
-    <Compile Include="DataAccessLayer\PermisoView.cs" />
-    <Compile Include="DataAccessLayer\Usuario.cs" />
-    <Compile Include="DataAccessLayer\UsuarioView.cs" />
+    <Compile Include="DataAccessLayer\Tables\Password.cs" />
+    <Compile Include="DataAccessLayer\Tables\Permiso.cs" />
+    <Compile Include="DataAccessLayer\Tables\PermisoUsuario.cs" />
+    <Compile Include="DataAccessLayer\Views\PermisoView.cs" />
+    <Compile Include="DataAccessLayer\Tables\Usuario.cs" />
+    <Compile Include="DataAccessLayer\Views\UsuarioView.cs" />
     <Compile Include="NuevoUsuarioWindow.xaml.cs">
       <DependentUpon>NuevoUsuarioWindow.xaml</DependentUpon>
     </Compile>
@@ -196,9 +196,6 @@
   <ItemGroup>
     <Resource Include="Resources\xls_64x64.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataAccessLayer\Tables\" />
-    <Folder Include="DataAccessLayer\Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

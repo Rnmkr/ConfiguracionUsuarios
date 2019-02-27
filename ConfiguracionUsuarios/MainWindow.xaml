@@ -18,17 +18,17 @@
                     <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="48" Height="48" />
                 </Button>
 
-                <Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <!--<Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_64x64.png" Width="48" Height="48" />
-                </Button>
+                </Button>-->
 
                 <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate48}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
                 </Button>
 
-                <Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
-                </Button>
+                </Button>-->
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -36,9 +36,9 @@
                     <Label Name="lblNombreUsuario" Content="Sebastian Sanchez" Margin="0" Foreground="#ECF0F1" VerticalContentAlignment="Center" TextOptions.TextFormattingMode="Display" Padding="5,0" HorizontalContentAlignment="Center"  Background="{x:Null}" FontFamily="Consolas" BorderBrush="{x:Null}" FontWeight="Bold"/>
                 </Border>
 
-                <Button x:Name="btnCambiarContraseña" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cambiar contraseña" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,5,2,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Width="36" Height="36">
+                <!--<Button x:Name="btnCambiarContraseña" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cambiar contraseña" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,5,2,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Width="36" Height="36">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/llave_64x64.png" Width="32" Height="32" />
-                </Button>
+                </Button>-->
 
                 <Button x:Name="btnCerrarSesion" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cerrar sesión" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Width="36" Height="36">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/puerta_64x64.png" Width="32" Height="32" />
