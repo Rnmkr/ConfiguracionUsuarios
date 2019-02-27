@@ -6,7 +6,7 @@
 
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="960" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
@@ -14,12 +14,12 @@
         <Grid Background="#2C3E50" Grid.Row="0" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
 
-                <Button x:Name="btnNuevoUsuario" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
+                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="48" Height="48" />
                 </Button>
 
-                <Button x:Name="btnAsignarAccesos" Click="btnAsignarAccesos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/recibo_64x64.png" Width="48" Height="48" />
+                <Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_64x64.png" Width="48" Height="48" />
                 </Button>
 
                 <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate48}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">

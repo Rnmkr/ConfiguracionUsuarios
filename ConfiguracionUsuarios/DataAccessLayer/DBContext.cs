@@ -1,4 +1,4 @@
-﻿namespace ConfiguracionUsuarios.DataAccessLayer
+namespace ConfiguracionUsuarios.DataAccessLayer
 {
     using System;
     using System.Data.Entity;
@@ -8,12 +8,14 @@
     public partial class DBContext : DbContext
     {
         public DBContext()
-            : base("data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+            //"data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework"
+            //"data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+            : base("data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework")
         {
         }
 
         public virtual DbSet<Aplicacion> Aplicacion { get; set; }
-        public virtual DbSet<Contraseña> Contraseña { get; set; }
+        public virtual DbSet<Password> Password { get; set; }
         public virtual DbSet<Permiso> Permiso { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<PermisoUsuario> PermisoUsuario { get; set; }
@@ -32,11 +34,11 @@
                 .HasForeignKey(e => e.FK_IDAplicacion)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Contraseña>()
+            modelBuilder.Entity<Password>()
                 .Property(e => e.HashedRFID)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Contraseña>()
+            modelBuilder.Entity<Password>()
                 .Property(e => e.HashedPassword)
                 .IsUnicode(false);
 
@@ -63,7 +65,7 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Usuario>()
-                .HasOptional(e => e.Contraseña)
+                .HasOptional(e => e.Password)
                 .WithRequired(e => e.Usuario);
 
             modelBuilder.Entity<Usuario>()

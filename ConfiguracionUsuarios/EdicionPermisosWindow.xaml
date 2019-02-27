@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         mc:Ignorable="d"
-        Title="Editar Permisos Específicos" Height="512" Width="480" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+        Title="Editar Permisos Específicos" Height="512" Width="420" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,7 +25,7 @@
 
         <ComboBox Name="cbAplicaciones" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="1" FontFamily="Consolas" FontWeight="Bold"/>
 
-        <DataGrid Name="dgPermisos" Grid.Row="2" VerticalScrollBarVisibility="Visible" >
+        <DataGrid Name="dgPermisos" Grid.Row="2" VerticalScrollBarVisibility="Visible" FontSize="12" >
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
             </DataGrid.Resources>
@@ -34,7 +34,7 @@
                 <StaticResource ResourceKey="ColumnHeaderStyle"/>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.CellStyle>
-                <StaticResource ResourceKey="DataGridCellCentrada"/>
+                <StaticResource ResourceKey="DataGridContentCellCentering"/>
             </DataGrid.CellStyle>
             <DataGrid.RowStyle>
                 <StaticResource ResourceKey="DataGridRowZebra"/>
@@ -42,7 +42,7 @@
 
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="PERMISO" Binding="{Binding NombrePermiso}" MinWidth="392" />
+                <DataGridTextColumn Header="PERMISO" Binding="{Binding NombrePermiso}" MinWidth="334" />
                 <DataGridCheckBoxColumn Header="ESTADO" Binding="{Binding Estado}"/>
             </DataGrid.Columns>
 

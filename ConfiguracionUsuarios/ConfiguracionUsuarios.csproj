@@ -65,7 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AsignacionAccesoWindow.xaml">
+    <Page Include="NuevoUsuarioWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,17 +81,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AsignacionAccesoWindow.xaml.cs">
-      <DependentUpon>AsignacionAccesoWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DataAccessLayer\Aplicacion.cs" />
-    <Compile Include="DataAccessLayer\Contraseña.cs" />
     <Compile Include="DataAccessLayer\DBContext.cs" />
+    <Compile Include="DataAccessLayer\Password.cs" />
     <Compile Include="DataAccessLayer\Permiso.cs" />
     <Compile Include="DataAccessLayer\PermisoUsuario.cs" />
     <Compile Include="DataAccessLayer\PermisoView.cs" />
     <Compile Include="DataAccessLayer\Usuario.cs" />
     <Compile Include="DataAccessLayer\UsuarioView.cs" />
+    <Compile Include="NuevoUsuarioWindow.xaml.cs">
+      <DependentUpon>NuevoUsuarioWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EdicionPermisosWindow.xaml.cs">
       <DependentUpon>EdicionPermisosWindow.xaml</DependentUpon>
     </Compile>
@@ -195,6 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\xls_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccessLayer\Tables\" />
+    <Folder Include="DataAccessLayer\Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

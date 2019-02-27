@@ -6,7 +6,8 @@ namespace ConfiguracionUsuarios.DataAccessLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Contraseña
+    [Table("Password")]
+    public partial class Password
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
