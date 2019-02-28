@@ -11,7 +11,7 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Background="#2C3E50" Grid.Row="0" Grid.ColumnSpan="2">
+        <Grid Background="#2C3E50" Grid.Row="0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
 
                 <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
@@ -46,11 +46,48 @@
 
             </StackPanel>
         </Grid>
-        <DataGrid Name="dgUsuarios" ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0,2,0,0" Padding="0,0,0,0" Grid.Row="1">
+        <DataGrid Name="dgUsuarios" ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Grid.Row="1">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
             </DataGrid.Resources>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
 
+                    <MenuItem x:Name="ctxmnuEditarusuario" Header="Editar datos de usuario" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem x:Name="ctxmnuEditarPermisos" Click="btnEditarPermisos_Click" Header="Editar Permisos" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem x:Name="ctxmnuResetPassword" Header="Reset Password" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem x:Name="ctxmnuResetRFID" Header="Reset RFID" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem x:Name="ctxmnuEliminarUsuario" Click="BtnEliminarUsuario_Click" Header="Eliminar Usuario" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.ColumnHeaderStyle>
                 <StaticResource ResourceKey="ColumnHeaderStyle"/>
             </DataGrid.ColumnHeaderStyle>

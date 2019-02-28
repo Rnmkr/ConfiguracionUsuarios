@@ -9,23 +9,22 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="48"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Background="#2C3E50" Grid.Row="0">
-            <Button x:Name="btnNuevoPedido" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Pedido a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
+        <!--<Grid Background="#2C3E50" Grid.Row="0"/>-->
+        <!--<Button x:Name="btnNuevoPedido" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Pedido a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/diskette_64x64.png" Width="48" Height="48" />
             </Button>
 
             <Border BorderThickness="0"  CornerRadius="12" Background="#225378" HorizontalAlignment="Center" VerticalAlignment="Center" Height="36" Margin="5">
                 <Label Name="lblNombreUsuario" Content="Jose Pompilio" Margin="0" Foreground="#ECF0F1" VerticalContentAlignment="Center" TextOptions.TextFormattingMode="Display" Padding="5,0" HorizontalContentAlignment="Center"  Background="{x:Null}" FontFamily="Consolas" BorderBrush="{x:Null}" FontWeight="Bold"/>
             </Border>
-        </Grid>
+        </Grid>-->
 
-        <ComboBox Name="cbAplicaciones" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="1" FontFamily="Consolas" FontWeight="Bold"/>
+        <ComboBox Name="cbAplicaciones" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="0" FontFamily="Consolas" FontWeight="Bold"/>
 
-        <DataGrid Name="dgPermisos" Grid.Row="2" VerticalScrollBarVisibility="Visible" FontSize="12" >
+        <DataGrid Name="dgPermisos" HeadersVisibility="None" Grid.Row="1" VerticalScrollBarVisibility="Visible" FontSize="12" >
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
             </DataGrid.Resources>
@@ -48,4 +47,5 @@
 
         </DataGrid>
     </Grid>
+
 </Window>
