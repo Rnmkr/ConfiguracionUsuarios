@@ -22,9 +22,9 @@
             </Border>
         </Grid>-->
 
-        <ComboBox Name="cbAplicaciones" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="0" FontFamily="Consolas" FontWeight="Bold"/>
+        <ComboBox Name="cbAplicaciones" SelectedIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="0" FontFamily="Consolas" FontWeight="Bold"/>
 
-        <DataGrid Name="dgPermisos" HeadersVisibility="None" Grid.Row="1" VerticalScrollBarVisibility="Visible" FontSize="12" Margin="10" >
+        <DataGrid Name="dgPermisos" ColumnWidth="*" HeadersVisibility="Column" Grid.Row="1" VerticalScrollBarVisibility="Visible" FontSize="12" Margin="5" >
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
             </DataGrid.Resources>
@@ -41,8 +41,8 @@
 
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="PERMISO" Binding="{Binding NombrePermiso}" MinWidth="334" />
-                <DataGridCheckBoxColumn Header="ESTADO" Binding="{Binding Estado}"/>
+                <DataGridTextColumn Header="PERMISO" Binding="{Binding NombrePermiso}" MinWidth="332"/>
+                <DataGridCheckBoxColumn Header="ESTADO" Binding="{Binding Estado}" />
             </DataGrid.Columns>
 
         </DataGrid>

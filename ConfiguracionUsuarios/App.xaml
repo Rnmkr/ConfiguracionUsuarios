@@ -6,33 +6,33 @@
     <Application.Resources>
 
         <!--Control colors.-->
-        <Color x:Key="RowColor">#FFECECEC</Color>
-        <Color x:Key="RowHoverColor">#FFFBFBFB</Color>
-        <Color x:Key="RowSelectedColor">#FFFBFBFB</Color>
-        <Color x:Key="RowHeaderColor">#FFFF0000</Color>
-        <Color x:Key="RowHeaderSelectedColor">#FFFF0000</Color>
+        <!--<Color x:Key="RowColor">#FFECECEC</Color>-->
+        <!--<Color x:Key="RowHoverColor">#FFFBFBFB</Color>-->
+        <!--<Color x:Key="RowSelectedColor">#FFFBFBFB</Color>-->
+        <!--<Color x:Key="RowHeaderColor">#FFFF0000</Color>-->
+        <!--<Color x:Key="RowHeaderSelectedColor">#FFFF0000</Color>-->
         <!--<Color x:Key="RowHeaderColor">#FF1885A1</Color>-->
         <!--<Color x:Key="RowHeaderSelectedColor">#FF12B0DA</Color>-->
-        <Color x:Key="ColumnHeaderHoverColor">#FF12B0DA</Color>
-        <Color x:Key="SelectedForegroungColor">#FF1885A1</Color>
+        <!--<Color x:Key="ColumnHeaderHoverColor">#FF12B0DA</Color>-->
+        <!--<Color x:Key="SelectedForegroungColor">#FF1885A1</Color>-->
 
         <!--Control Brushes.-->
-        <SolidColorBrush x:Key="HeaderTextColor" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="HeaderBackgroundColor" Color="#FF1885A1"/>
-        <SolidColorBrush x:Key="DataGridBackgroundColor" Color="#FFECECEC"/>
-        <SolidColorBrush x:Key="RowBorderColor" Color="#FFD8D8D8"/>
-        <SolidColorBrush x:Key="RowSelectedTextColor" Color="#FF1885A1"/>
-        <SolidColorBrush x:Key="IDColumnText" Color="#FF808080"/>
-        <SolidColorBrush x:Key="CellBorderColor" Color="#FFD8D8D8"/>
+        <!--<SolidColorBrush x:Key="HeaderTextColor" Color="#FFFFFFFF"/>-->
+        <!--<SolidColorBrush x:Key="HeaderBackgroundColor" Color="#FF1885A1"/>-->
+        <!--<SolidColorBrush x:Key="DataGridBackgroundColor" Color="#FFECECEC"/>-->
+        <!--<SolidColorBrush x:Key="RowBorderColor" Color="#FFD8D8D8"/>-->
+        <!--<SolidColorBrush x:Key="RowSelectedTextColor" Color="#FF1885A1"/>-->
+        <!--<SolidColorBrush x:Key="IDColumnText" Color="#FF808080"/>-->
+        <!--<SolidColorBrush x:Key="CellBorderColor" Color="#FFD8D8D8"/>-->
 
 
         <!--#region DataGrid-->
         <Style x:Name="MainDataGridStyle" TargetType="{x:Type DataGrid}">
             <Setter Property="Height" Value="Auto" />
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="#FFA9D1F4"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
             <Setter Property="SelectionUnit" Value="FullRow"/>
-            <Setter Property="HorizontalGridLinesBrush" Value="#FFA9D1F4"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="AlternationCount" Value="2"/>
             <Setter Property="ColumnHeaderHeight" Value="39"/>
@@ -53,8 +53,9 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Margin" Value="0,1,0,1"/>
             <Setter Property="MinRowHeight" Value="28"/>
-            <Setter Property="RowHeaderWidth" Value="5"/>
+            <Setter Property="RowHeaderWidth" Value="10"/>
 
             <Setter Property="Template">
                 <Setter.Value>
@@ -113,15 +114,15 @@
         <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="FontFamily" Value="Consolas"/>
             <Setter Property="SnapsToDevicePixels" Value="True" />
-            <Setter Property="Background" Value="#2C3E50"/>
+            <Setter Property="Background" Value="#FF1885A1"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="ContextMenu" Value="{x:Null}"/>
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="BorderBrush" Value="#2C3E50" />
+            <Setter Property="BorderBrush" Value="#FFE6E6E6" />
             <Setter Property="Foreground" Value="#ECF0F1" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="Padding" Value="5,0,0,0"/>
-            <Setter Property="Margin" Value="0,1,0,1"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
         </Style>
         <!--#endregion-->
 

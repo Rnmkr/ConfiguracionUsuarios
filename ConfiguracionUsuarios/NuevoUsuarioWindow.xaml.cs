@@ -13,16 +13,47 @@ namespace ConfiguracionUsuarios
     {
         internal Usuario nuevoUsuario;
         internal UsuarioView nuevoUsuarioView;
+        internal UsuarioView editarUsuarioView;
 
-        public NuevoUsuarioWindow()
+        public NuevoUsuarioWindow(UsuarioView _editarUsuarioView)
         {
             InitializeComponent();
-            //DBContext context = new DBContext();
-            //dgAccesos.ItemsSource = context.Aplicacion.Select(s => s).ToList();
+            editarUsuarioView = _editarUsuarioView;
 
+            if (editarUsuarioView != null)
+            {
+                tbLegajo.Text = editarUsuarioView.LegajoUsuario;
+                tbNombre.Text = editarUsuarioView.NombreUsuario;
+                tbApellido.Text = editarUsuarioView.ApellidoUsuario;
+                tbRFID.Password = editarUsuarioView.HashedRFID;
+            }
         }
 
         private void btnNuevoUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            if (editarUsuarioView != null)
+            {
+                EditarUsuario();
+            }
+            else
+            {
+                NuevoUsuario();
+            }
+
+        }
+        private void EditarUsuario()
+        {
+            DBContext context = new DBContext();
+            var user = context.Usuario.Where(w => w.IDUsuario == editarUsuarioView.IDUsuario).Select(s => s).SingleOrDefault();
+            user.LegajoUsuario = tbLegajo.Text;
+            user.NombreUsuario = tbNombre.Text;
+            user.ApellidoUsuario = tbApellido.Text;
+            user.Password.HashedRFID = tbRFID.Password;
+            context.SaveChangesAsync();
+            MessageBox.Show("Usuario Guardado Correctamente lince!");
+        }
+
+        private void NuevoUsuario()
         {
             //retorno de un metodo de comprobacion de datos de usuario
             bool dataIsValid = true;
@@ -56,6 +87,8 @@ namespace ConfiguracionUsuarios
                 {
                     MessageBox.Show("El legajo ya esta registrado en la base de datos lince!");
                 }
+
+
             }
         }
     }

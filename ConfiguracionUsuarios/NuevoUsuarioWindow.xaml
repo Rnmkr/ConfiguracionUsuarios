@@ -13,10 +13,10 @@
         <TextBox Name="tbApellido" Height="26" Margin="0,70,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
         <PasswordBox Name="tbRFID" Height="26" Margin="0,100,10,0" Password="" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
         <Button x:Name="btnNuevoPedido" Content="Aceptar" ToolTip="Ingresar un Nuevo Pedido a la Base de Datos (CTRL+N)" Margin="0,0,0,10" Width="72" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="btnNuevoUsuario_Click"/>
-        <Label Content="Legajo" Margin="10,10,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
-        <Label Content="Nombre" Margin="10,40,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
-        <Label Content="Apellido" Margin="10,70,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
-        <Label Content="RFID" Margin="10,100,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
+        <Label Content="LEGAJO" Margin="10,10,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
+        <Label Content="NOMBRE" Margin="10,40,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
+        <Label Content="APELLIDO" Margin="10,70,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
+        <Label Content="RFID" Margin="10,100,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
 
         <!--<DataGrid Name="dgAccesos" Grid.Row="0" VerticalScrollBarVisibility="Visible" >
             <DataGrid.Resources>
