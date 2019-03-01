@@ -5,10 +5,32 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <!--Control colors.-->
+        <Color x:Key="RowColor">#FFECECEC</Color>
+        <Color x:Key="RowHoverColor">#FFFBFBFB</Color>
+        <Color x:Key="RowSelectedColor">#FFFBFBFB</Color>
+        <Color x:Key="RowHeaderColor">#FFFF0000</Color>
+        <Color x:Key="RowHeaderSelectedColor">#FFFF0000</Color>
+        <!--<Color x:Key="RowHeaderColor">#FF1885A1</Color>-->
+        <!--<Color x:Key="RowHeaderSelectedColor">#FF12B0DA</Color>-->
+        <Color x:Key="ColumnHeaderHoverColor">#FF12B0DA</Color>
+        <Color x:Key="SelectedForegroungColor">#FF1885A1</Color>
+
+        <!--Control Brushes.-->
+        <SolidColorBrush x:Key="HeaderTextColor" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="HeaderBackgroundColor" Color="#FF1885A1"/>
+        <SolidColorBrush x:Key="DataGridBackgroundColor" Color="#FFECECEC"/>
+        <SolidColorBrush x:Key="RowBorderColor" Color="#FFD8D8D8"/>
+        <SolidColorBrush x:Key="RowSelectedTextColor" Color="#FF1885A1"/>
+        <SolidColorBrush x:Key="IDColumnText" Color="#FF808080"/>
+        <SolidColorBrush x:Key="CellBorderColor" Color="#FFD8D8D8"/>
+
+
         <!--#region DataGrid-->
         <Style x:Name="MainDataGridStyle" TargetType="{x:Type DataGrid}">
             <Setter Property="Height" Value="Auto" />
-            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#FFA9D1F4"/>
             <Setter Property="SelectionUnit" Value="FullRow"/>
             <Setter Property="HorizontalGridLinesBrush" Value="#FFA9D1F4"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
@@ -32,7 +54,7 @@
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="MinRowHeight" Value="28"/>
-            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="RowHeaderWidth" Value="5"/>
 
             <Setter Property="Template">
                 <Setter.Value>
