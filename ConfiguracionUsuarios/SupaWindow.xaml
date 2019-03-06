@@ -19,15 +19,15 @@
         </Rectangle>
         <StackPanel ScrollViewer.VerticalScrollBarVisibility="Disabled">
         <Button Grid.Column="0" Name="btnUSUARIOS" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click" Margin="2,5,0,0" HorizontalAlignment="Left">
-            <Image Source="/IngresoPedidos;component/Resources/list.png" Width="28" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Image Source="/ConfiguracionUsuarios;component/Resources/32.png" Width="28" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" />
         </Button>
 
             <Button Grid.Column="0" Name="btnPEDIDOS" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-            <Image Source="/IngresoPedidos;component/Resources/search.png" Width="28" Height="28" />
+                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="28" Height="28" />
         </Button>
 
             <Button Grid.Column="0" Name="btnPEDIDOS1" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/door.png" Width="28" Height="28" />
+                <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="28" Height="28" />
             </Button>
 
             <Button Grid.Column="0" Name="btnPEDIDOS2" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
@@ -48,7 +48,7 @@
                 <Image Source="/IngresoPedidos;component/Resources/door.png" Width="28" Height="28" />
             </Button>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS6" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
+            <Button Grid.Column="0" Name="btnPEDIDOS6"  Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
                 <Image Source="/IngresoPedidos;component/Resources/search.png" Width="28" Height="28" />
             </Button>
 

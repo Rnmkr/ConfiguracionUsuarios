@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         mc:Ignorable="d"
-        Title="Nuevo Usuario" Height="170" Width="220" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+        Title="Nuevo Usuario" Height="170" Width="240" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
 
-    <Grid Height="141" Width="214">
-        <TextBox Name="tbLegajo" Height="26" Margin="0,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
-        <TextBox Name="tbNombre" Height="26" Margin="0,40,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
-        <TextBox Name="tbApellido" Height="26" Margin="0,70,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
+    <Grid Height="141" Width="234">
+        <TextBox Name="tbLegajo" Height="26" Margin="0,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" FontFamily="Consolas" FontSize="14"/>
+        <TextBox Name="tbNombre" Height="26" Margin="0,40,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" FontFamily="Consolas" FontSize="14"/>
+        <TextBox Name="tbApellido" Height="26" Margin="0,70,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" FontFamily="Consolas" FontSize="14"/>
         <Button x:Name="btnNuevoPedido" Content="Aceptar" ToolTip="Ingresar un Nuevo Pedido a la Base de Datos (CTRL+N)" Margin="0,0,0,10" Width="72" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="btnNuevoUsuario_Click"/>
-        <Label Content="LEGAJO" Margin="10,10,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
-        <Label Content="NOMBRE" Margin="10,40,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
-        <Label Content="APELLIDO" Margin="10,70,135,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
+        <Label Content="LEGAJO" Margin="10,10,158,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas" FontWeight="Bold"/>
+        <Label Content="NOMBRE" Margin="10,40,158,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right" FontFamily="Consolas" FontWeight="Bold"/>
+        <Label Content="APELLIDO" Margin="10,71,158,0" VerticalAlignment="Top" Height="25" HorizontalContentAlignment="Right" FontFamily="Consolas" FontWeight="Bold"/>
 
         <!--<DataGrid Name="dgAccesos" Grid.Row="0" VerticalScrollBarVisibility="Visible" >
             <DataGrid.Resources>
