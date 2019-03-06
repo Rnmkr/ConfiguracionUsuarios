@@ -36,7 +36,7 @@
             <Setter Property="HorizontalGridLinesBrush" Value="Transparent"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="AlternationCount" Value="2"/>
-            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="ColumnHeaderHeight" Value="28"/>
             <Setter Property="IsSynchronizedWithCurrentItem" Value="False"/>
             <Setter Property="EnableColumnVirtualization" Value="True"/>
             <Setter Property="CanUserAddRows" Value="False"/>
