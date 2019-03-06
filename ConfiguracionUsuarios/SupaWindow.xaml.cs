@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using ConfiguracionUsuarios.IngresoPedidos;
+
 
 namespace ConfiguracionUsuarios
 {
@@ -19,6 +9,7 @@ namespace ConfiguracionUsuarios
     /// </summary>
     public partial class SupaWindow : Window
     {
+        
         public SupaWindow()
         {
             InitializeComponent();
@@ -27,13 +18,15 @@ namespace ConfiguracionUsuarios
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ListaUsuarios lu = new ListaUsuarios();
-            //MainWindow mw = new MainWindow();
-            contentControl.Content = lu;
+            ListaPedidos mw = new ListaPedidos();
+            contentControl.Content = mw;
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            ListaUsuarios lu = new ListaUsuarios();
+            contentControl.Content = lu;
         }
     }
 }
