@@ -23,7 +23,7 @@
                 </Button>-->
 
                 <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate48}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
+                    <Image Source="/ConfiguracionUsuarios;component/Resources/search.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
                 </Button>
 
                 <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">

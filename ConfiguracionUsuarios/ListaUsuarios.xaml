@@ -8,13 +8,13 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Name="mainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="42"/>
+            <RowDefinition Height="38"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Background="#FF1885A1" Grid.Row="0" Margin="5,0,5,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplate32}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="0" HorizontalAlignment="Left">
+                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplate32}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="2" HorizontalAlignment="Left">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="32" Height="32" />
                 </Button>
 
@@ -22,8 +22,12 @@
                     <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_64x64.png" Width="48" Height="48" />
                 </Button>-->
 
-                <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <!--<Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" />
+                </Button>-->
+                
+                <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <Image Source="/IngresoPedidos;component/Resources/search.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" />
                 </Button>
 
                 <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
