@@ -32,7 +32,8 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="#FFABADB3"/>
             <Setter Property="SelectionUnit" Value="FullRow"/>
-            <Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>
+            <!--<Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>-->
+            <Setter Property="HorizontalGridLinesBrush" Value="Transparent"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="AlternationCount" Value="2"/>
             <Setter Property="ColumnHeaderHeight" Value="40"/>
