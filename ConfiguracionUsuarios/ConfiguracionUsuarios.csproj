@@ -210,5 +210,11 @@
   <ItemGroup>
     <Resource Include="Resources\xls_64x64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IngresoPedidos\IngresoPedidos\IngresoPedidos.csproj">
+      <Project>{db9ed62a-147f-4a6f-b690-0e5d3c682f13}</Project>
+      <Name>IngresoPedidos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

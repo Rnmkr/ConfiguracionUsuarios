@@ -8,22 +8,22 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Name="mainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Background="#FF1885A1" Grid.Row="0" Margin="5,2,5,2">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+        <Grid Background="#FF1885A1" Grid.Row="0" Margin="5,0,5,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplateGreen}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="5,5,5,5" HorizontalAlignment="Left">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="48" Height="48" />
+                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplate32}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Top" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Margin="2" HorizontalAlignment="Left">
+                    <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="32" Height="32" />
                 </Button>
 
                 <!--<Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_64x64.png" Width="48" Height="48" />
                 </Button>-->
 
-                <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate48}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
+                <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="top" HorizontalAlignment="Left" Margin="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" />
                 </Button>
 
                 <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
@@ -46,7 +46,7 @@
 
             </StackPanel>
         </Grid>
-        <DataGrid Name="dgUsuarios" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="5,0,5,5" Padding="0,0,0,0" Grid.Row="1">
+        <DataGrid Name="dgUsuarios" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="5,1,5,5" Padding="0,0,0,0" Grid.Row="1">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
             </DataGrid.Resources>

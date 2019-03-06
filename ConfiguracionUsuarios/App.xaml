@@ -35,7 +35,7 @@
             <Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="AlternationCount" Value="2"/>
-            <Setter Property="ColumnHeaderHeight" Value="39"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
             <Setter Property="IsSynchronizedWithCurrentItem" Value="False"/>
             <Setter Property="EnableColumnVirtualization" Value="True"/>
             <Setter Property="CanUserAddRows" Value="False"/>
@@ -227,6 +227,34 @@
                         <Grid>
                             <Ellipse Name ="OuterRing" Width ="34" Height ="34" Fill ="Transparent"/>
                             <Ellipse Name ="InnerRing" Width ="32" Height ="32" Fill ="#CC4452"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property ="IsMouseOver" Value ="True">
+                                <Setter TargetName ="OuterRing" Property ="Fill" Value ="LightCyan"/>
+                            </Trigger>
+                            <Trigger Property ="IsPressed" Value ="True">
+                                <Setter TargetName="OuterRing" Property="Fill" Value="Cyan"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--#endregion-->
+
+        <!--#region Rounded Button 32-->
+
+        <Style x:Key ="roundButtonTemplate32gray" TargetType ="{x:Type Button}">
+            <Setter Property ="Foreground" Value ="Black"/>
+            <Setter Property ="FontWeight" Value ="Bold"/>
+            <Setter Property ="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType ="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Name ="OuterRing" Width ="34" Height ="34" Fill ="Transparent"/>
+                            <Ellipse Name ="InnerRing" Width ="32" Height ="32" Fill ="#225378"/>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                         <ControlTemplate.Triggers>
