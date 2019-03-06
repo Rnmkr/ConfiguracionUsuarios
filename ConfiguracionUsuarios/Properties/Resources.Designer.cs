@@ -121,6 +121,16 @@ namespace ConfiguracionUsuarios.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compo {
+            get {
+                object obj = ResourceManager.GetObject("compo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon copiar_16x16 {
@@ -146,6 +156,16 @@ namespace ConfiguracionUsuarios.Properties {
         internal static System.Drawing.Bitmap diskette_64x64 {
             get {
                 object obj = ResourceManager.GetObject("diskette_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fail {
+            get {
+                object obj = ResourceManager.GetObject("fail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

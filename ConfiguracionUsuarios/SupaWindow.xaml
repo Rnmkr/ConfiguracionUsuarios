@@ -35,13 +35,14 @@
             </Button>
 
             <Button Grid.Column="0" Name="btnPEDIDOS3" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="28" Height="28" />
+                <Image Source="/ConfiguracionUsuarios;component/Resources/compo.png" Width="28" Height="28" />
             </Button>
             
             <Separator/>
-
+            <Label Content="JP" FontWeight="Bold" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" Height="32" Width="32"/>
+            
             <Button Grid.Column="0" Name="btnPEDIDOS4" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/add.png" Width="28" Height="28" />
+                <Image Source="/ConfiguracionUsuarios;component/Resources/fail.png" Width="28" Height="28" />
             </Button>
 
             <Button Grid.Column="0" Name="btnPEDIDOS5" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">

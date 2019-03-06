@@ -25,9 +25,21 @@ namespace ConfiguracionUsuarios
             if (cbAplicaciones.SelectedValue != null)
             {
                 var _permisos = context.PermisoView.Where(w => w.FK_IDUsuario == _idUsuario).Select(s => s);
-                dgPermisos.ItemsSource = _permisos.Where(w => w.NombreAplicacion == cbAplicaciones.SelectedValue.ToString()).ToList();
+                lvPermisos.ItemsSource = _permisos.Where(w => w.NombreAplicacion == cbAplicaciones.SelectedValue.ToString()).ToList();
 
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            //context.SaveChangesAsync();
+            MessageBox.Show("Todo piola!");
+        }
+
+        private void ChkSelectAll_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
