@@ -25,7 +25,6 @@ namespace ConfiguracionUsuarios
                 tbLegajo.Text = editarUsuarioView.LegajoUsuario;
                 tbNombre.Text = editarUsuarioView.NombreUsuario;
                 tbApellido.Text = editarUsuarioView.ApellidoUsuario;
-                tbRFID.Password = editarUsuarioView.HashedRFID;
             }
         }
 
@@ -48,9 +47,9 @@ namespace ConfiguracionUsuarios
             user.LegajoUsuario = tbLegajo.Text;
             user.NombreUsuario = tbNombre.Text;
             user.ApellidoUsuario = tbApellido.Text;
-            user.Password.HashedRFID = tbRFID.Password;
             context.SaveChangesAsync();
             MessageBox.Show("Usuario Guardado Correctamente lince!");
+            Close();
         }
 
         private void NuevoUsuario()
