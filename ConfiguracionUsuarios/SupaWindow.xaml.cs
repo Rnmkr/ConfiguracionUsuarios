@@ -1,6 +1,8 @@
 ﻿using IngresoPedidos.DataAccessLayer;
+using System;
 using System.Windows;
-
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace ConfiguracionUsuarios
 {
@@ -17,13 +19,28 @@ namespace ConfiguracionUsuarios
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SelectUnselectButtons(sender);
             ListaUsuarios lu = new ListaUsuarios();
             contentControl.Content = lu;
 
         }
 
+        private void SelectUnselectButtons(object sender)
+        {
+            foreach (ToggleButton ctrl in spAppMenu.Children)
+
+                if (ctrl != sender)
+                {
+                    ctrl.IsChecked = false;
+
+                }
+            
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            SelectUnselectButtons(sender);
+
             if (IngresoPedidos.Helpers.ConnectionCheck.Success(IngresoPedidos.Helpers.StaticData.ServerHostName))
             {
 

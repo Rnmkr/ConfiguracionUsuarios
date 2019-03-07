@@ -9,65 +9,75 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="38"/>
+            <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <!--<Rectangle Grid.Column="0" Stroke="#FFABADB3" >-->
         <Rectangle Grid.Column="0" Stroke="#FFABADB3" >
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FF1885A1"/>
             </Rectangle.Fill>
         </Rectangle>
-        <StackPanel ScrollViewer.VerticalScrollBarVisibility="Disabled">
-        <Button Grid.Column="0" Name="btnUSUARIOS" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click" Margin="2,5,0,0" HorizontalAlignment="Left">
-            <Image Source="/ConfiguracionUsuarios;component/Resources/32.png" Width="28" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        </Button>
+        <StackPanel Name="spAppMenu" ScrollViewer.VerticalScrollBarVisibility="Disabled">
 
-            <Button Grid.Column="0" Name="btnPEDIDOS" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="28" Height="28" />
-        </Button>
+            <!--<Label Content="NS"  FontWeight="Normal"  Margin="0,5,0,0" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" Height="32" Width="32" FontSize="20"/>-->
+            <ToggleButton Grid.Column="0" ToolTip="CERRAR SESIÓN" Name="btnUSUARIOS2" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click" Margin="0,3,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/door.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS1" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" ToolTip="USUARIOS" Name="btnUSUARIOS" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click" Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/ConfiguracionUsuarios;component/Resources/32.png" Width="32" Height="32" />
+        </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS2" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/key.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" ToolTip="PEDIDOS" Name="btnPEDIDOS" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
+        </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS3" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/compo.png" Width="28" Height="28" />
-            </Button>
-            
-            <Separator/>
-            <Label Content="JP" FontWeight="Bold" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" Height="32" Width="32"/>
-            
-            <Button Grid.Column="0" Name="btnPEDIDOS4" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/fail.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" ToolTip="PRODUCCION" Name="btnPEDIDOS1" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS5" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/door.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" ToolTip="EMBALADO" Name="btnPEDIDOS2" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/key.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS6"  Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/search.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS3" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/ConfiguracionUsuarios;component/Resources/compo.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS7" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="28" Height="28" />
-            </Button>
+            <!--<Separator Margin="0,5,0,5" >
+                <Separator.RenderTransform>
+                    <ScaleTransform ScaleY="2" />
+                </Separator.RenderTransform>
+            </Separator>-->
 
-            <Button Grid.Column="0" Name="btnPEDIDOS8" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/list.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS4" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/ConfiguracionUsuarios;component/Resources/fail.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS9" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/key.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS5" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/door.png" Width="32" Height="32" />
+            </ToggleButton>
 
-            <Button Grid.Column="0" Name="btnPEDIDOS10" Style="{StaticResource roundButtonTemplate32gray}"  VerticalAlignment="Top" Click="Button_Click_1"  Margin="2" HorizontalAlignment="Left">
-                <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="28" Height="28" />
-            </Button>
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS6"  Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/search.png" Width="32" Height="32" />
+            </ToggleButton>
+
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS7" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="32" Height="32" />
+            </ToggleButton>
+
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS8" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/list.png" Width="32" Height="32" />
+            </ToggleButton>
+
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS9" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/key.png" Width="32" Height="32" />
+            </ToggleButton>
+
+            <ToggleButton Grid.Column="0" Name="btnPEDIDOS10" Style="{StaticResource roundButtonTemplate32graytoggle}"  VerticalAlignment="Center" Click="Button_Click_1"  Margin="0,2,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="32" Height="32" />
+            </ToggleButton>
             
         </StackPanel>
 

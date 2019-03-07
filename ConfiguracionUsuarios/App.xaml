@@ -254,8 +254,8 @@
                 <Setter.Value>
                     <ControlTemplate TargetType ="{x:Type Button}">
                         <Grid>
-                            <Ellipse Name ="OuterRing" Width ="34" Height ="34" Fill ="Transparent"/>
-                            <Ellipse Name ="InnerRing" Width ="32" Height ="32" Fill ="#225378"/>
+                            <Ellipse Name ="OuterRing" Width ="44" Height ="44" Fill ="Transparent"/>
+                            <Ellipse Name ="InnerRing" Width ="42" Height ="42" Fill ="#225378"/>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -264,6 +264,37 @@
                             </Trigger>
                             <Trigger Property ="IsPressed" Value ="True">
                                 <Setter TargetName="OuterRing" Property="Fill" Value="Cyan"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--#endregion-->
+
+        <!--#region Rounded Button 32-->
+
+        <Style x:Key ="roundButtonTemplate32graytoggle" TargetType ="{x:Type ToggleButton}">
+            <Setter Property ="Foreground" Value ="Black"/>
+            <Setter Property ="FontWeight" Value ="Bold"/>
+            <Setter Property ="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType ="{x:Type ToggleButton}">
+                        <Grid>
+                            <Ellipse Name ="OuterRing" Width ="44" Height ="44" Fill ="Transparent"/>
+                            <Ellipse Name ="InnerRing" Width ="42" Height ="42" Fill ="Transparent"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property ="IsMouseOver" Value ="True">
+                                <Setter TargetName ="OuterRing" Property ="Fill" Value ="LightBlue"/>
+                            </Trigger>
+                            <Trigger Property ="IsPressed" Value ="True">
+                                <Setter TargetName="OuterRing" Property="Fill" Value="Cyan"/>
+                            </Trigger>
+                            <Trigger Property ="IsChecked" Value ="True">
+                                <Setter TargetName="InnerRing" Property="Fill" Value="#225378"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -284,6 +315,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        
 
 
     </Application.Resources>
