@@ -1,5 +1,7 @@
 ﻿using IngresoPedidos.DataAccessLayer;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -11,41 +13,42 @@ namespace ConfiguracionUsuarios
     /// </summary>
     public partial class SupaWindow : Window
     {
+        IEnumerable<Button> listaBotones;
 
         public SupaWindow()
         {
             InitializeComponent();
+            listaBotones = spAppMenu.Children.OfType<Button>();
+            if (listaBotones.Count() == 1)
+            {
+                CargarUsuarios(null);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SelectUnselectButtons(sender);
+            CargarUsuarios(sender);
 
-            ListaUsuarios lu = new ListaUsuarios();
-            contentControl.Content = lu;
-
-        }
-
-        private void SelectUnselectButtons(object clickedButton)
-        {
-            
-            foreach (Button tb in spAppMenu.Children)
-            {
-                if (tb == clickedButton)
-                {
-                    tb.IsEnabled = false;
-                }
-                else
-                {
-                    tb.IsEnabled = true;
-                }
-            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            CargarPedidos(sender);
+        }
 
+        private void CargarUsuarios(object sender)
+        {
+            if (sender != null)
+            {
+                SelectUnselectButtons(sender);
+            }
 
+            ListaUsuarios lu = new ListaUsuarios();
+            contentControl.Content = lu;
+        }
+
+        private void CargarPedidos(object sender)
+        {
             SelectUnselectButtons(sender);
 
             if (IngresoPedidos.Helpers.ConnectionCheck.Success(IngresoPedidos.Helpers.StaticData.ServerHostName))
@@ -59,7 +62,21 @@ namespace ConfiguracionUsuarios
                     contentControl.Content = iplp;
                 }
             }
+        }
 
+        private void SelectUnselectButtons(object clickedButton)
+        {
+            foreach (Button button in spAppMenu.Children.OfType<Button>())
+            {
+                if (button == clickedButton)
+                {
+                    button.IsEnabled = false;
+                }
+                else
+                {
+                    button.IsEnabled = true;
+                }
+            }
         }
     }
 }

@@ -341,7 +341,7 @@
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
                             </Trigger>
                             <Trigger Property ="IsEnabled" Value ="False">
-                                <Setter TargetName="LeftPart" Property="Fill" Value="Cyan"/>
+                                <Setter TargetName="LeftPart" Property="Fill" Value="LightCyan"/>
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
                             </Trigger>
                         </ControlTemplate.Triggers>

@@ -6,98 +6,45 @@
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         mc:Ignorable="d"
         Title="SupaWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    
     <Grid>
-
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!--<Rectangle Grid.Column="0" Stroke="#FFABADB3" >-->
-        <Rectangle Grid.Column="0">
+
+        <Rectangle Grid.Column="0" Margin="0,0,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FF1885A1"/>
             </Rectangle.Fill>
         </Rectangle>
 
-        <StackPanel Name="spAppMenu">
+        <StackPanel Name="spAppMenu" Margin="0,0,0,0" VerticalAlignment="Top">
 
-            <!--<Label Content="NS"  FontWeight="Normal"  Margin="0,5,0,0" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" Height="32" Width="32" FontSize="20"/>-->
-            <!--<Button Grid.Column="0" ToolTip="CERRAR SESIÓN" Style="{StaticResource squareTransparentButton}" Name="btnUSUARIOS2" VerticalAlignment="Center" Click="Button_Click" Margin="0,0,0,0" HorizontalAlignment="Center" Width="50" Height="50" BorderBrush="{x:Null}">
-                <Image Source="/IngresoPedidos;component/Resources/door.png" Width="32" Height="32" />
-            </Button>-->
+            <Label Content="NS" FontWeight="Normal"  Margin="0,0,0,0" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" FontSize="20" Height="48"/>
 
-
-
-
-
-
-
-            <Button Grid.Column="0" Cursor="Hand" Name="btnUSUARIOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click" Margin="0,5,0,0" BorderBrush="{x:Null}" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="White" Background="{x:Null}" Padding="0" FontFamily="Consolas" FontSize="14">
+            <Button Grid.Column="0" Cursor="Hand" Name="btnUSUARIOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click" Margin="0,2,0,0" BorderBrush="{x:Null}" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="White" Background="{x:Null}" Padding="0" FontFamily="Consolas" FontSize="14">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/32.png" Width="32" Height="32" />
             </Button>
-
-            <!--<Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS1" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"   Name="btnPEDIDOS2" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS3" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"   Name="btnPEDIDOS4" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"   Name="btnPEDIDOS5" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand" Name="btnPEDIDOS6" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"   Name="btnPEDIDOS7" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS8" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"   Name="btnPEDIDOS9" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS10" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS11" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" Height="30" FontFamily="Consolas" FontSize="14">
-                <Image Source="/ConfiguracionUsuarios;component/Resources/64.png" Width="32" Height="32" />
-            </Button>-->
-
+            
             <Button Grid.Column="0" Cursor="Hand" ToolTip="PRODUCCION" Name="btnPEDIDOS1" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-
                 <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="32" Height="32" />
-
             </Button>
 
             <Button Grid.Column="0" Cursor="Hand" ToolTip="EMBALADO" Name="btnPEDIDOS2" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch">
-
                 <Image Source="/IngresoPedidos;component/Resources/key.png" Width="32" Height="32" />
-
             </Button>
-
+            
             <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS3" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left">
-
                 <Image Source="/ConfiguracionUsuarios;component/Resources/compo.png" Width="32" Height="32" />
-
             </Button>
 
-
-            <!--<Separator Margin="0,5,0,5" >
+            <Separator Margin="0,5,0,5" >
                 <Separator.RenderTransform>
                     <ScaleTransform ScaleY="2" />
                 </Separator.RenderTransform>
-            </Separator>-->
-
+            </Separator>
 
             <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS4" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/fail.png" Width="32" Height="32" />
@@ -119,11 +66,10 @@
                 <Image Source="/IngresoPedidos;component/Resources/list.png" Width="32" Height="32" />
             </Button>
 
-
-
         </StackPanel>
 
         <ContentControl Grid.Column="1" x:Name="contentControl" Margin="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
 
     </Grid>
+    
 </Window>
