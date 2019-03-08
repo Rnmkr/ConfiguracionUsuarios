@@ -329,21 +329,17 @@
                     <ControlTemplate TargetType ="{x:Type Button}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3"/>
                                 <ColumnDefinition Width="5"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Rectangle Name="RightPart" Grid.Column="0" Grid.ColumnSpan="3"/>
-                            <Rectangle Name="LeftPart" Grid.Column="0" Height="auto"/>
-                            <ContentPresenter Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Rectangle Name="RightPart" Grid.Column="0" Grid.ColumnSpan="2"/>
+                            <Rectangle Name="LeftPart" Grid.Column="0"/>
+                            <ContentPresenter Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property ="IsMouseOver" Value ="True">
-                                <!--<Setter TargetName ="LeftPart" Property ="Fill" Value ="LightCyan"/>-->
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
                             </Trigger>
-                            <!--<Trigger Property ="IsPressed" Value ="True">
-                            </Trigger>-->
                             <Trigger Property ="IsEnabled" Value ="False">
                                 <Setter TargetName="LeftPart" Property="Fill" Value="Cyan"/>
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>

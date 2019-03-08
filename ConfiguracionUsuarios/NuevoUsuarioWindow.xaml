@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         mc:Ignorable="d"
         Title="Nuevo Usuario" Height="170" Width="240" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-
     <Grid Height="141" Width="234">
         <TextBox Name="tbLegajo" Height="26" Margin="0,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" FontFamily="Consolas" FontSize="14"/>
         <TextBox Name="tbNombre" Height="26" Margin="0,40,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" FontFamily="Consolas" FontSize="14"/>
