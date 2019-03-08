@@ -24,7 +24,7 @@
 
         <ComboBox Name="cbAplicaciones" SelectedIndex="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="cbAplicaciones_SelectionChanged" Grid.Row="0" FontFamily="Consolas" FontWeight="Bold" Margin="10,10,230,6" Height="20"/>
         <Button Content="Aceptar" Grid.Row="1" HorizontalAlignment="Center" Margin="165,0,150,10" VerticalAlignment="Bottom" Width="75" Click="Button_Click"/>
-        <Button Content="Revalidar" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Revalidar" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <!--<ListBox Name="lbPermisos" Margin="10,10,10,35" VerticalAlignment="Stretch" SelectionMode="Multiple" Grid.Row="1">
             <ListBox.Resources>
                 <Style TargetType="ListBoxItem">
@@ -54,7 +54,7 @@
                                 <CheckBox Margin="0" HorizontalContentAlignment="Left" Width="auto" HorizontalAlignment="Left" x:Name="cbSelectRow" IsChecked="{Binding EstadoPermiso}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
-                        <CheckBox Margin="0" x:Name="chkSelectAll" Click="ChkSelectAll_Click" HorizontalAlignment="Left"  HorizontalContentAlignment="Left" />
+                        <CheckBox Margin="0" x:Name="chkSelectAll" Checked="chkSelectAll_Checked" Unchecked="chkSelectAll_Unchecked" HorizontalAlignment="Left"  HorizontalContentAlignment="Left" />
                     </GridViewColumn>
                     
                     <GridViewColumn Header="Nombre del Permiso" Width="300" DisplayMemberBinding="{Binding Path=NombrePermiso}"/>
