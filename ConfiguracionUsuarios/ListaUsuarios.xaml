@@ -58,6 +58,7 @@
         <DataGrid Name="dgUsuarios" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="AliceBlue"/>
             </DataGrid.Resources>
             <DataGrid.ContextMenu>
                 <ContextMenu>

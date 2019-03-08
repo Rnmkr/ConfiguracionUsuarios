@@ -20,25 +20,32 @@ namespace ConfiguracionUsuarios
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SelectUnselectButtons(sender);
+
             ListaUsuarios lu = new ListaUsuarios();
             contentControl.Content = lu;
 
         }
 
-        private void SelectUnselectButtons(object sender)
+        private void SelectUnselectButtons(object clickedButton)
         {
-            foreach (ToggleButton ctrl in spAppMenu.Children)
-
-                if (ctrl != sender)
-                {
-                    ctrl.IsChecked = false;
-
-                }
             
+            foreach (Button tb in spAppMenu.Children)
+            {
+                if (tb == clickedButton)
+                {
+                    tb.IsEnabled = false;
+                }
+                else
+                {
+                    tb.IsEnabled = true;
+                }
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+
             SelectUnselectButtons(sender);
 
             if (IngresoPedidos.Helpers.ConnectionCheck.Success(IngresoPedidos.Helpers.StaticData.ServerHostName))

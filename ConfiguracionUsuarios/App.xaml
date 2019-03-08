@@ -139,7 +139,7 @@
                     <Setter Property="Background" Value="{x:Null}"/>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="LightYellow"/>
+                    <Setter Property="Background" Value="LightCyan"/>
                 </Trigger>
                 <Trigger Property="IsSelected" Value="True">
                     <Setter Property="Background" Value="{x:Null}"/>
@@ -175,7 +175,7 @@
                     <ControlTemplate TargetType ="{x:Type Button}">
                         <Grid>
                             <Ellipse Name ="OuterRing" Width ="50" Height ="50" Fill ="Transparent"/>
-                            <Ellipse Name ="InnerRing" Width ="48" Height ="48" Fill ="#CC4452"/>
+                            <Ellipse Name ="InnerRing" Width ="48" Height ="48" Fill ="#ECF0F1"/>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -190,6 +190,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!--#region Rounded Button Add(Green InnerRing)-->
+
+
+
+
 
         <!--#region Rounded Button Add(Green InnerRing)-->
 
@@ -316,7 +322,38 @@
             </Setter>
         </Style>
 
-        
+        <!--#region Apps Menu "Hamburger" Button-->
+        <Style x:Key ="hamburgerMenuButton" TargetType ="{x:Type Button}">
+            <Setter Property ="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType ="{x:Type Button}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Name="RightPart" Grid.Column="0" Grid.ColumnSpan="3"/>
+                            <Rectangle Name="LeftPart" Grid.Column="0" Height="auto"/>
+                            <ContentPresenter Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property ="IsMouseOver" Value ="True">
+                                <!--<Setter TargetName ="LeftPart" Property ="Fill" Value ="LightCyan"/>-->
+                                <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
+                            </Trigger>
+                            <!--<Trigger Property ="IsPressed" Value ="True">
+                            </Trigger>-->
+                            <Trigger Property ="IsEnabled" Value ="False">
+                                <Setter TargetName="LeftPart" Property="Fill" Value="Cyan"/>
+                                <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--#endregion-->
 
 
     </Application.Resources>
