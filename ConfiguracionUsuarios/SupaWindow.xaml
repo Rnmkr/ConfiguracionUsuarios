@@ -22,21 +22,21 @@
 
         <StackPanel Name="spAppMenu" Margin="0,0,0,0" VerticalAlignment="Top">
 
-            <Label Content="NS" FontWeight="Normal"  Margin="0,0,0,0" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" FontSize="20" Height="48"/>
+            <Label Name="lblCaption" Content="NS" FontWeight="Normal"  Margin="0,0,0,0" FontFamily="Consolas" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" FontSize="8" Height="48"/>
 
-            <Button Grid.Column="0" Cursor="Hand" Name="btnUSUARIOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click" Margin="0,2,0,0" BorderBrush="{x:Null}" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="White" Background="{x:Null}" Padding="0" FontFamily="Consolas" FontSize="14">
+            <Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnUSUARIOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click" Margin="0,2,0,0" BorderBrush="{x:Null}" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="White" Background="{x:Null}" Padding="0" FontFamily="Consolas" FontSize="14">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/32.png" Width="32" Height="32" />
             </Button>
-            
-            <Button Grid.Column="0" Cursor="Hand" ToolTip="PRODUCCION" Name="btnPEDIDOS1" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+
+            <Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" ToolTip="PRODUCCION" Name="btnPRODUCCION" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="32" Height="32" />
             </Button>
 
-            <Button Grid.Column="0" Cursor="Hand" ToolTip="EMBALADO" Name="btnPEDIDOS2" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch">
+            <Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" ToolTip="EMBALADO" Name="btnPEDIDOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch">
                 <Image Source="/IngresoPedidos;component/Resources/key.png" Width="32" Height="32" />
             </Button>
-            
-            <Button Grid.Column="0" Cursor="Hand"  Name="btnPEDIDOS3" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left">
+
+            <Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected"  Name="btnADMIN" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/compo.png" Width="32" Height="32" />
             </Button>
 
@@ -46,23 +46,23 @@
                 </Separator.RenderTransform>
             </Separator>
 
-            <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS4" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
+            <Button Cursor="Hand" MouseEnter="btnShowCaption" Grid.Column="0" MouseLeave="btnShowSelected" Name="btnPIEZAS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/ConfiguracionUsuarios;component/Resources/fail.png" Width="32" Height="32" />
             </Button>
 
-            <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS5" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
+            <Button Cursor="Hand" Grid.Column="0" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnFALLAS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/IngresoPedidos;component/Resources/door.png" Width="32" Height="32" />
             </Button>
 
-            <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS6" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
+            <Button Cursor="Hand" Grid.Column="0" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnPRODUCTOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/IngresoPedidos;component/Resources/search.png" Width="32" Height="32" />
             </Button>
 
-            <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS7" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
+            <Button Cursor="Hand" Grid.Column="0" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnMODELOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/IngresoPedidos;component/Resources/xls.png" Width="32" Height="32" />
             </Button>
 
-            <Button Cursor="Hand" Grid.Column="0" Name="btnPEDIDOS8" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
+            <Button Cursor="Hand" Grid.Column="0" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnINFORMES" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/IngresoPedidos;component/Resources/list.png" Width="32" Height="32" />
             </Button>
 
