@@ -68,10 +68,17 @@
     <Compile Include="ListaUsuarios.xaml.cs">
       <DependentUpon>ListaUsuarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainLogin.xaml.cs">
+      <DependentUpon>MainLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SupaWindow.xaml.cs">
       <DependentUpon>SupaWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="ListaUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -233,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo sistema.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

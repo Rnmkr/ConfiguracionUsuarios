@@ -162,5 +162,11 @@ namespace ConfiguracionUsuarios
                 }
             }
         }
+
+        private void btnADMIN_Click(object sender, RoutedEventArgs e)
+        {
+            MainLogin ml = new MainLogin();
+            contentControl.Content = ml;
+        }
     }
 }
