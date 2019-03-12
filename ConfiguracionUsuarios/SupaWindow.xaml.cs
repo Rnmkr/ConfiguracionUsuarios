@@ -20,10 +20,13 @@ namespace ConfiguracionUsuarios
         {
             InitializeComponent();
             listaBotones = spAppMenu.Children.OfType<Button>();
-            if (listaBotones.Count() == 1)
-            {
-                CargarUsuarios(null);
-            }
+            MainLogin ml = new MainLogin();
+            contentControl.Content = ml;
+
+            //if (listaBotones.Count() == 1)
+            //{
+            //    CargarUsuarios(null);
+            //}
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -165,6 +168,7 @@ namespace ConfiguracionUsuarios
 
         private void btnADMIN_Click(object sender, RoutedEventArgs e)
         {
+            SelectUnselectButtons(sender);
             MainLogin ml = new MainLogin();
             contentControl.Content = ml;
         }

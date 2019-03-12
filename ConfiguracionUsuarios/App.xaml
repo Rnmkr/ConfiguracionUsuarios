@@ -329,12 +329,11 @@
                     <ControlTemplate TargetType ="{x:Type Button}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="3"/>
                                 <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
                             <Rectangle Name="MiddlePart" Grid.Column="0" Grid.ColumnSpan="3"/>
-                            <Rectangle Name="LeftPart" Grid.Column="2"/>
+                            <Rectangle Name="LeftPart" Grid.Column="1"/>
                             <Rectangle Name="RightPart" Grid.Column="0"/>
                             <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
@@ -345,7 +344,7 @@
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
                             </Trigger>
                             <Trigger Property ="IsEnabled" Value ="False">
-                                <Setter TargetName="LeftPart" Property="Fill" Value="LightCyan"/>
+                                <!--<Setter TargetName="LeftPart" Property="Fill" Value="LightCyan"/>-->
                                 <Setter TargetName="MiddlePart" Property="Fill" Value="#FF3296AF"/>
                                 <Setter TargetName="RightPart" Property="Fill" Value="LightCyan"/>
                                 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         mc:Ignorable="d"
-        Title="SupaWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="SupaWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
     
     <Grid>
         
@@ -32,7 +32,7 @@
                 <Image Source="/ConfiguracionUsuarios;component/Resources/aaa.png" Width="32" Height="32" />
             </Button>
 
-            <Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" ToolTip="EMBALADO" Name="btnPEDIDOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch">
+            <!--<Button Grid.Column="0" Cursor="Hand" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" ToolTip="EMBALADO" Name="btnPEDIDOS" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch">
                 <Image Source="/IngresoPedidos;component/Resources/key.png" Width="32" Height="32" />
             </Button>
 
@@ -64,7 +64,7 @@
 
             <Button Cursor="Hand" Grid.Column="0" MouseEnter="btnShowCaption" MouseLeave="btnShowSelected" Name="btnINFORMES" Style="{StaticResource hamburgerMenuButton}" Click="Button_Click_1"  Margin="0,0,0,0">
                 <Image Source="/IngresoPedidos;component/Resources/list.png" Width="32" Height="32" />
-            </Button>
+            </Button>-->
 
         </StackPanel>
 
