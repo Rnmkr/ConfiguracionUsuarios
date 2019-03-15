@@ -65,6 +65,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataAccessLayer\BooleanToVisibilityConverter.cs" />
+    <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
+    <Compile Include="DataAccessLayer\DBContext.cs" />
+    <Compile Include="DataAccessLayer\Tables\Password.cs" />
+    <Compile Include="DataAccessLayer\Tables\Pedido.cs" />
+    <Compile Include="DataAccessLayer\Tables\Permiso.cs" />
+    <Compile Include="DataAccessLayer\Views\PermisoView.cs" />
+    <Compile Include="DataAccessLayer\Tables\PermisoUsuario.cs" />
+    <Compile Include="DataAccessLayer\Tables\Usuario.cs" />
+    <Compile Include="DataAccessLayer\Views\UsuarioView.cs" />
     <Compile Include="ListaUsuarios.xaml.cs">
       <DependentUpon>ListaUsuarios.xaml</DependentUpon>
     </Compile>
@@ -98,14 +108,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
-    <Compile Include="DataAccessLayer\DBContext.cs" />
-    <Compile Include="DataAccessLayer\Tables\Password.cs" />
-    <Compile Include="DataAccessLayer\Tables\Permiso.cs" />
-    <Compile Include="DataAccessLayer\Tables\PermisoUsuario.cs" />
-    <Compile Include="DataAccessLayer\Views\PermisoView.cs" />
-    <Compile Include="DataAccessLayer\Tables\Usuario.cs" />
-    <Compile Include="DataAccessLayer\Views\UsuarioView.cs" />
     <Compile Include="NuevoUsuarioWindow.xaml.cs">
       <DependentUpon>NuevoUsuarioWindow.xaml</DependentUpon>
     </Compile>
@@ -244,5 +246,6 @@
   <ItemGroup>
     <Resource Include="Resources\logo sistema.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

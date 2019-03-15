@@ -51,7 +51,7 @@
                     <GridViewColumn x:Name="gridClm_SelectRow" Width="auto">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox Margin="0" HorizontalContentAlignment="Left" Width="auto" HorizontalAlignment="Left" x:Name="cbSelectRow" IsChecked="{Binding EstadoPermiso}"/>
+                                <CheckBox Margin="0" HorizontalContentAlignment="Left" Width="auto" HorizontalAlignment="Left" x:Name="cbSelectRow" IsChecked="{Binding EstadoPermiso, TargetNullValue=False}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                         <CheckBox Margin="0" x:Name="chkSelectAll" Checked="chkSelectAll_Checked" Unchecked="chkSelectAll_Unchecked" HorizontalAlignment="Left"  HorizontalContentAlignment="Left" />

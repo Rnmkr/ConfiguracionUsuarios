@@ -7,15 +7,14 @@ namespace ConfiguracionUsuarios.DataAccessLayer
 
     public partial class DBContext : DbContext
     {
-        //"data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework";
-        //"data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
-
-        public DBContext() : base("data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework")
+        public DBContext()
+            : base("name=DBContext")
         {
         }
 
         public virtual DbSet<Aplicacion> Aplicacion { get; set; }
         public virtual DbSet<Password> Password { get; set; }
+        public virtual DbSet<Pedido> Pedido { get; set; }
         public virtual DbSet<Permiso> Permiso { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<PermisoUsuario> PermisoUsuario { get; set; }
@@ -40,6 +39,14 @@ namespace ConfiguracionUsuarios.DataAccessLayer
 
             modelBuilder.Entity<Password>()
                 .Property(e => e.HashedPassword)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Pedido>()
+                .Property(e => e.NumeroPedido)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Pedido>()
+                .Property(e => e.NumeroArticulo)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Permiso>()
@@ -69,7 +76,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
                 .WithRequired(e => e.Usuario);
 
             modelBuilder.Entity<Usuario>()
-                .HasMany(e => e.PermisoUsuario)
+                .HasMany(e => e.Permiso_Usuario)
                 .WithRequired(e => e.Usuario)
                 .HasForeignKey(e => e.FK_IDUsuario)
                 .WillCascadeOnDelete(false);

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ConfiguracionUsuarios"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="LightGray">
     <Grid Name="mainGrid">
@@ -55,49 +54,52 @@
 
             </StackPanel>
         </Grid>
-        <DataGrid Name="dgUsuarios" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+        
+        <DataGrid Name="dgUsuarios" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+            
             <DataGrid.Resources>
-                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="LightCyan"/>
-                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
             </DataGrid.Resources>
+            
             <DataGrid.ContextMenu>
                 <ContextMenu>
-
                     <MenuItem x:Name="ctxmnuEditarusuario" Click="ctxmnuEditarusuario_Click" Header="Editar datos" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                         </MenuItem.Icon>
                     </MenuItem>
-
                     <MenuItem x:Name="ctxmnuEditarPermisos" Click="btnEditarPermisos_Click" Header="Editar Permisos" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                         </MenuItem.Icon>
                     </MenuItem>
-
                     <Separator/>
-
-                    <MenuItem x:Name="ctxmnuResetPassword" Click="ctxmnuResetPassword_Click" Header="Reset Password" InputGestureText="Ctrl+E">
+                    <MenuItem x:Name="ctxmnuResetPassword" Click="ctxmnuResetPassword_Click" Header="Blanquear Password" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                         </MenuItem.Icon>
                     </MenuItem>
-
-                    <MenuItem x:Name="ctxmnuResetRFID" Click="ctxmnuResetRFID_Click" Header="Reset RFID" InputGestureText="Ctrl+E">
+                    <MenuItem x:Name="ctxmnuResetRFID" Click="ctxmnuResetRFID_Click" Header="Blanquear RFID" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                         </MenuItem.Icon>
                     </MenuItem>
-
                     <Separator/>
 
-                    <MenuItem x:Name="ctxmnuEliminarUsuario" Click="BtnEliminarUsuario_Click" Header="Dar de baja" InputGestureText="Ctrl+E">
+
+
+                    <MenuItem x:Name="ctxmnuEliminarUsuario"  Click="BtnEliminarUsuario_Click" Header="Activar/Desactivar" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
                         </MenuItem.Icon>
+
+                        
                     </MenuItem>
+
                 </ContextMenu>
             </DataGrid.ContextMenu>
+
             <DataGrid.ColumnHeaderStyle>
                 <StaticResource ResourceKey="ColumnHeaderStyle"/>
             </DataGrid.ColumnHeaderStyle>
@@ -108,9 +110,17 @@
                 <StaticResource ResourceKey="DataGridRowZebra"/>
             </DataGrid.RowStyle>
 
-            <DataGrid.Columns>
+            <!--<DataGrid.Columns>-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
+                    <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}"/>
+                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
+                    <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="RFID" Binding="{Binding HashedRFID, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
+                </DataGrid.Columns>
 
-                <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"  />
+                <!--<DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"  />
                 <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}" />
                 <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
                 <DataGridTemplateColumn Header="PASSWORD" CanUserResize="False" Width="*">
@@ -119,9 +129,9 @@
                             <TextBlock>
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
-                                        <Setter Property="Text" Value="N/A" />
+                                        --><!--<Setter Property="Text" Value="N/A" />--><!--
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding HashedPassword,TargetNullValue=NULL}">
+                                            <DataTrigger Binding="{Binding HashedPassword, TargetNullValue=NULL}">
                                                 <Setter Property="Text" Value="YES" />
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -149,9 +159,9 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <!--<DataGridTextColumn Header="CONTRASEÑA" Binding="{Binding HashedPassword}"/>
-                <DataGridTextColumn Header="RFID" Binding="{Binding HashedRFID}"/>-->
-            </DataGrid.Columns>
+                --><!--<DataGridTextColumn Header="CONTRASEÑA" Binding="{Binding HashedPassword}"/>
+                <DataGridTextColumn Header="RFID" Binding="{Binding HashedRFID}"/>--><!--
+            </DataGrid.Columns>-->
         </DataGrid>
         <!--<Button Content="Dar de baja" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
         <Button Content="Reset Pass." HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>

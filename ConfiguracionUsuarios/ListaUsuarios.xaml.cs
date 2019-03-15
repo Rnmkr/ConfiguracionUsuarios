@@ -11,6 +11,7 @@ namespace ConfiguracionUsuarios
     public partial class ListaUsuarios : UserControl
     {
         DBContext databaseContext = new DBContext();
+        public bool? selectedUsuarioStatus;
 
         public ListaUsuarios()
         {
@@ -22,6 +23,8 @@ namespace ConfiguracionUsuarios
         {
             EditarPermisos(null);
         }
+
+
 
         private void ctxmnuEditarusuario_Click(object sender, RoutedEventArgs e)
         {
@@ -124,6 +127,24 @@ namespace ConfiguracionUsuarios
                 passwordusuario.HashedRFID = null;
                 context.SaveChangesAsync();
                 MessageBox.Show("RFID reiniciado", "Reset Password", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void DgUsuarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var suv = (UsuarioView)dgUsuarios.SelectedItem;
+
+            if (suv != null)
+            {
+                selectedUsuarioStatus = suv.EstadoUsuario;
+                if (null == selectedUsuarioStatus || false == selectedUsuarioStatus)
+                {
+                    ctxmnuEliminarUsuario.Header = "Activar";
+                }
+                else
+                {
+                    ctxmnuEliminarUsuario.Header = "Dar de baja";
+                }
             }
         }
     }

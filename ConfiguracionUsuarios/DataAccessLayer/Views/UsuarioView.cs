@@ -34,5 +34,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
 
         [StringLength(48)]
         public string HashedRFID { get; set; }
+
+        public bool? EstadoUsuario { get; set; }
     }
 }

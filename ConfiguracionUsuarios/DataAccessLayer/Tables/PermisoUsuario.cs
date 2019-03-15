@@ -6,7 +6,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("PermisoUsuario")]
+    [Table("Permiso-Usuario")]
     public partial class PermisoUsuario
     {
         [Key]
