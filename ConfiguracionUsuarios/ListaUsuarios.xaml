@@ -3,121 +3,126 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="LightGray">
-    <Grid Name="mainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid Background="#FF1885A1" Grid.Row="0" Margin="0">
-            <Rectangle Grid.Column="0" Stroke="#FFABADB3" >
-                <!--<Rectangle.Fill>
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
+            <Grid Name="mainGrid">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Background="#FF1885A1" Grid.Row="0" Margin="0">
+                <Rectangle Grid.Column="0" Stroke="#FFABADB3" >
+                    <!--<Rectangle.Fill>
                     <SolidColorBrush Color="#FF1885A1"/>
                 </Rectangle.Fill>-->
-            </Rectangle>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+                </Rectangle>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
 
-                <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplate32gray}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}"   Margin="3,0,0,0" HorizontalAlignment="Center" Width="44" Height="44">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="32" Height="32" />
-                </Button>
+                    <Button x:Name="btnNuevoUsuario" Click="btnNuevoUsuario_Click" Style="{StaticResource roundButtonTemplate32gray}" ToolTip="Ingresar un Nuevo Usuario a la Base de Datos (CTRL+N)" VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}"   Margin="3,0,0,0" HorizontalAlignment="Center" Width="44" Height="44">
+                        <Image Source="/ConfiguracionUsuarios;component/Resources/nuevo_64x64.png" Width="32" Height="32" />
+                    </Button>
 
-                <!--<Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <!--<Button x:Name="btnEliminarUsuario" Click="BtnEliminarUsuario_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Exportar lista a planilla de cálculos (CTRL+X)"  HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_64x64.png" Width="48" Height="48" />
                 </Button>-->
 
-                <!--<Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <!--<Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/lupa_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" />
                 </Button>-->
 
-                <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32gray}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="2,0,0,0" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Width="44" Height="44">
-                    <Image Source="/IngresoPedidos;component/Resources/search.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="32" Height="32" />
-                </Button>
+                    <Button x:Name="btnBuscarPedido" Style="{StaticResource roundButtonTemplate32gray}" ToolTip="Buscar un pedido en la Base de Datos (CTRL+B)" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="2,0,0,0" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Width="44" Height="44">
+                        <Image Source="/IngresoPedidos;component/Resources/search.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="32" Height="32" />
+                    </Button>
 
-                <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                    <!--<Button x:Name="btnEditarPermisos" Click="btnEditarPermisos_Click" Style="{StaticResource roundButtonTemplate48}" ToolTip="Filtrar la lista por Estado (CTRL+F)" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_64x64.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="48" Height="48" />
                 </Button>-->
 
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <!--<Border BorderThickness="0"  CornerRadius="12" Background="#225378" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Height="36">
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<Border BorderThickness="0"  CornerRadius="12" Background="#225378" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Height="36">
                     <Label Name="lblNombreUsuario" Content="Sebastian Sanchez" Margin="0" Foreground="#ECF0F1" VerticalContentAlignment="Center" TextOptions.TextFormattingMode="Display" Padding="5,0" HorizontalContentAlignment="Center"  Background="{x:Null}" FontFamily="Consolas" BorderBrush="{x:Null}" FontWeight="Bold"/>
                 </Border>-->
 
-                <!--<Button x:Name="btnCambiarContraseña" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cambiar contraseña" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,5,2,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Width="36" Height="36">
+                    <!--<Button x:Name="btnCambiarContraseña" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cambiar contraseña" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,5,2,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Width="36" Height="36">
                     <Image Source="/ConfiguracionUsuarios;component/Resources/llave_64x64.png" Width="32" Height="32" />
                 </Button>-->
 
-                <Button x:Name="btnCerrarSesion" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cerrar sesión" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Width="36" Height="36">
-                    <Image Source="/ConfiguracionUsuarios;component/Resources/puerta_64x64.png" Width="32" Height="32" VerticalAlignment="Center" />
-                </Button>
+                    <Button x:Name="btnCerrarSesion" Style="{StaticResource roundButtonTemplate32}" ToolTip="Cerrar sesión" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="2,5,5,5" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Width="36" Height="36">
+                        <Image Source="/ConfiguracionUsuarios;component/Resources/puerta_64x64.png" Width="32" Height="32" VerticalAlignment="Center" />
+                    </Button>
 
-            </StackPanel>
-        </Grid>
-        
-        <DataGrid Name="dgUsuarios" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
-            
-            <DataGrid.Resources>
-                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
-                <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
-            </DataGrid.Resources>
-            
-            <DataGrid.ContextMenu>
-                <ContextMenu>
-                    <MenuItem x:Name="ctxmnuEditarusuario" Click="ctxmnuEditarusuario_Click" Header="Editar datos" InputGestureText="Ctrl+E">
-                        <MenuItem.Icon>
-                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <MenuItem x:Name="ctxmnuEditarPermisos" Click="btnEditarPermisos_Click" Header="Editar Permisos" InputGestureText="Ctrl+E">
-                        <MenuItem.Icon>
-                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <Separator/>
-                    <MenuItem x:Name="ctxmnuResetPassword" Click="ctxmnuResetPassword_Click" Header="Blanquear Password" InputGestureText="Ctrl+E">
-                        <MenuItem.Icon>
-                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <MenuItem x:Name="ctxmnuResetRFID" Click="ctxmnuResetRFID_Click" Header="Blanquear RFID" InputGestureText="Ctrl+E">
-                        <MenuItem.Icon>
-                            <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <Separator/>
+                </StackPanel>
+            </Grid>
+
+            <DataGrid Name="dgUsuarios" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                    <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
+                </DataGrid.Resources>
+
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem x:Name="ctxmnuEditarusuario" Click="ctxmnuEditarusuario_Click" Header="Editar datos" InputGestureText="Ctrl+E">
+                            <MenuItem.Icon>
+                                <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem x:Name="ctxmnuEditarPermisos" Click="btnEditarPermisos_Click" Header="Editar Permisos" InputGestureText="Ctrl+E">
+                            <MenuItem.Icon>
+                                <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem x:Name="ctxmnuResetPassword" Click="ctxmnuResetPassword_Click" Header="Blanquear Password" InputGestureText="Ctrl+E">
+                            <MenuItem.Icon>
+                                <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem x:Name="ctxmnuResetRFID" Click="ctxmnuResetRFID_Click" Header="Blanquear RFID" InputGestureText="Ctrl+E">
+                            <MenuItem.Icon>
+                                <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator/>
 
 
 
-                    <MenuItem x:Name="ctxmnuEliminarUsuario"  Click="BtnEliminarUsuario_Click" Header="Activar/Desactivar" InputGestureText="Ctrl+E">
-                        <MenuItem.Icon>
-                            <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
-                        </MenuItem.Icon>
+                        <MenuItem x:Name="ctxmnuEliminarUsuario"  Click="BtnEliminarUsuario_Click" Header="Activar/Desactivar" InputGestureText="Ctrl+E">
+                            <MenuItem.Icon>
+                                <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
+                            </MenuItem.Icon>
 
-                        
-                    </MenuItem>
 
-                </ContextMenu>
-            </DataGrid.ContextMenu>
+                        </MenuItem>
 
-            <DataGrid.ColumnHeaderStyle>
-                <StaticResource ResourceKey="ColumnHeaderStyle"/>
-            </DataGrid.ColumnHeaderStyle>
-            <DataGrid.CellStyle>
-                <StaticResource ResourceKey="DataGridCellCentrada"/>
-            </DataGrid.CellStyle>
-            <DataGrid.RowStyle>
-                <StaticResource ResourceKey="DataGridRowZebra"/>
-            </DataGrid.RowStyle>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
 
-            <!--<DataGrid.Columns>-->
+                <DataGrid.ColumnHeaderStyle>
+                    <StaticResource ResourceKey="ColumnHeaderStyle"/>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.CellStyle>
+                    <StaticResource ResourceKey="DataGridCellCentrada"/>
+                </DataGrid.CellStyle>
+                <DataGrid.RowStyle>
+                    <StaticResource ResourceKey="DataGridRowZebra"/>
+                </DataGrid.RowStyle>
+
+                <!--<DataGrid.Columns>-->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
                     <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}"/>
                     <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
                     <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
                     <DataGridCheckBoxColumn Header="RFID" Binding="{Binding HashedRFID, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
                 </DataGrid.Columns>
 
                 <!--<DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"  />
@@ -129,7 +134,9 @@
                             <TextBlock>
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
-                                        --><!--<Setter Property="Text" Value="N/A" />--><!--
+                                        -->
+                <!--<Setter Property="Text" Value="N/A" />-->
+                <!--
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding HashedPassword, TargetNullValue=NULL}">
                                                 <Setter Property="Text" Value="YES" />
@@ -159,15 +166,19 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                --><!--<DataGridTextColumn Header="CONTRASEÑA" Binding="{Binding HashedPassword}"/>
-                <DataGridTextColumn Header="RFID" Binding="{Binding HashedRFID}"/>--><!--
+                -->
+                <!--<DataGridTextColumn Header="CONTRASEÑA" Binding="{Binding HashedPassword}"/>
+                <DataGridTextColumn Header="RFID" Binding="{Binding HashedRFID}"/>-->
+                <!--
             </DataGrid.Columns>-->
-        </DataGrid>
-        <!--<Button Content="Dar de baja" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+            </DataGrid>
+            <!--<Button Content="Dar de baja" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
         <Button Content="Reset Pass." HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
         <Button Content="NuevoUser" HorizontalAlignment="Left" Margin="584,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
         <Button Content="Editar" HorizontalAlignment="Left" Margin="504,10,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
         <Button Content="Guardar " HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="75" Height="23"/>-->
-
+    </Grid>
+    </materialDesign:TransitioningContent>
+        
     </Grid>
 </UserControl>

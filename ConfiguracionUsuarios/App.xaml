@@ -4,35 +4,49 @@
              xmlns:local="clr-namespace:ConfiguracionUsuarios"
              StartupUri="SupaWindow.xaml">
     <Application.Resources>
-
-        <!--Control colors.-->
-        <!--<Color x:Key="RowColor">#FFECECEC</Color>-->
-        <!--<Color x:Key="RowHoverColor">#FFFBFBFB</Color>-->
-        <!--<Color x:Key="RowSelectedColor">#FFFBFBFB</Color>-->
-        <!--<Color x:Key="RowHeaderColor">#FFFF0000</Color>-->
-        <!--<Color x:Key="RowHeaderSelectedColor">#FFFF0000</Color>-->
-        <!--<Color x:Key="RowHeaderColor">#FF1885A1</Color>-->
-        <!--<Color x:Key="RowHeaderSelectedColor">#FF12B0DA</Color>-->
-        <!--<Color x:Key="ColumnHeaderHoverColor">#FF12B0DA</Color>-->
-        <!--<Color x:Key="SelectedForegroungColor">#FF1885A1</Color>-->
-
-        <!--Control Brushes.-->
-        <!--<SolidColorBrush x:Key="HeaderTextColor" Color="#FFFFFFFF"/>-->
-        <!--<SolidColorBrush x:Key="HeaderBackgroundColor" Color="#FF1885A1"/>-->
-        <!--<SolidColorBrush x:Key="DataGridBackgroundColor" Color="#FFECECEC"/>-->
-        <!--<SolidColorBrush x:Key="RowBorderColor" Color="#FFD8D8D8"/>-->
-        <!--<SolidColorBrush x:Key="RowSelectedTextColor" Color="#FF1885A1"/>-->
-        <!--<SolidColorBrush x:Key="IDColumnText" Color="#FF808080"/>-->
-        <!--<SolidColorBrush x:Key="CellBorderColor" Color="#FFD8D8D8"/>-->
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 
 
-        <!--#region DataGrid-->
+
+
+
+        <!--<Color x:Key="RowColor">#FFECECEC</Color>
+        <Color x:Key="RowHoverColor">#FFFBFBFB</Color>
+        <Color x:Key="RowSelectedColor">#FFFBFBFB</Color>
+        <Color x:Key="RowHeaderColor">#FFFF0000</Color>
+        <Color x:Key="RowHeaderSelectedColor">#FFFF0000</Color>
+        <Color x:Key="RowHeaderColor">#FF1885A1</Color>
+        <Color x:Key="RowHeaderSelectedColor">#FF12B0DA</Color>
+        <Color x:Key="ColumnHeaderHoverColor">#FF12B0DA</Color>
+        <Color x:Key="SelectedForegroungColor">#FF1885A1</Color>
+
+
+        <SolidColorBrush x:Key="HeaderTextColor" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="HeaderBackgroundColor" Color="#FF1885A1"/>
+        <SolidColorBrush x:Key="DataGridBackgroundColor" Color="#FFECECEC"/>
+        <SolidColorBrush x:Key="RowBorderColor" Color="#FFD8D8D8"/>
+        <SolidColorBrush x:Key="RowSelectedTextColor" Color="#FF1885A1"/>
+        <SolidColorBrush x:Key="IDColumnText" Color="#FF808080"/>
+        <SolidColorBrush x:Key="CellBorderColor" Color="#FFD8D8D8"/>-->
+
+
+
+        
         <Style x:Name="MainDataGridStyle" TargetType="{x:Type DataGrid}">
             <Setter Property="Height" Value="Auto" />
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="#FFABADB3"/>
             <Setter Property="SelectionUnit" Value="FullRow"/>
-            <!--<Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>-->
+            
+        <Setter Property="HorizontalGridLinesBrush" Value="#FF1885A1"/>
+        
             <Setter Property="HorizontalGridLinesBrush" Value="Transparent"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="AlternationCount" Value="2"/>
@@ -109,9 +123,8 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <!--#endregion-->
 
-        <!--#region DataGrid Column Header-->
+        
         <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="FontFamily" Value="Consolas"/>
             <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -125,15 +138,17 @@
             <Setter Property="Padding" Value="5,0,0,0"/>
             <Setter Property="Margin" Value="0,0,0,0"/>
         </Style>
-        <!--#endregion-->
+        
 
-        <!--#region DataGrid Row-->
+        
         <Style x:Key="DataGridRowZebra" TargetType="{x:Type DataGridRow}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="Background" Value="#FFE6E6E6"/>
             <Setter Property="FontWeight" Value="Normal"/>
             <Setter Property="ContextMenu" Value="{x:Null}"/>
-            <!--<Setter Property="Margin" Value="1,0,0,0"/>-->
+            
+        <Setter Property="Margin" Value="1,0,0,0"/>
+        
             <Style.Triggers>
                 <Trigger Property="AlternationIndex" Value="1">
                     <Setter Property="Background" Value="{x:Null}"/>
@@ -146,9 +161,9 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <!--#endregion-->
+        
 
-        <!--#region DataGrid Cell-->
+        
         <Style x:Key="DataGridCellCentrada" TargetType="{x:Type DataGridCell}">
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
             <Setter Property="Template">
@@ -161,11 +176,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--#endregion-->
-        
         
 
-        <!--#region Rounded Button 48-->
 
         <Style x:Key ="roundButtonTemplate48" TargetType ="{x:Type Button}">
             <Setter Property ="Foreground" Value ="Black"/>
@@ -191,13 +203,8 @@
             </Setter>
         </Style>
 
-        <!--#region Rounded Button Add(Green InnerRing)-->
 
-
-
-
-
-        <!--#region Rounded Button Add(Green InnerRing)-->
+        
 
         <Style x:Key ="roundButtonTemplateGreen" TargetType ="{x:Type Button}" BasedOn="{StaticResource roundButtonTemplate48}">
             <Setter Property ="Template">
@@ -221,9 +228,8 @@
             </Setter>
         </Style>
 
-        <!--#endregion-->
 
-        <!--#region Rounded Button 32-->
+        
 
         <Style x:Key ="roundButtonTemplate32" TargetType ="{x:Type Button}">
             <Setter Property ="Foreground" Value ="Black"/>
@@ -249,9 +255,9 @@
             </Setter>
         </Style>
 
-        <!--#endregion-->
+        
 
-        <!--#region Rounded Button 32-->
+        
 
         <Style x:Key ="roundButtonTemplate32gray" TargetType ="{x:Type Button}">
             <Setter Property ="Foreground" Value ="Black"/>
@@ -277,9 +283,9 @@
             </Setter>
         </Style>
 
-        <!--#endregion-->
+        
 
-        <!--#region Rounded Button 32-->
+        
 
         <Style x:Key ="roundButtonTemplate32graytoggle" TargetType ="{x:Type ToggleButton}">
             <Setter Property ="Foreground" Value ="Black"/>
@@ -308,7 +314,9 @@
             </Setter>
         </Style>
 
-        <!--#endregion-->
+        
+
+        
 
         <Style x:Key="DataGridContentCellCentering" TargetType="{x:Type DataGridCell}">
             <Setter Property="Template">
@@ -322,7 +330,9 @@
             </Setter>
         </Style>
 
-        <!--#region Apps Menu "Hamburger" Button-->
+        
+
+        
         <Style x:Key ="hamburgerMenuButton" TargetType ="{x:Type Button}">
             <Setter Property ="Template">
                 <Setter.Value>
@@ -340,22 +350,27 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property ="IsMouseOver" Value ="True">
                                 <Setter TargetName="LeftPart" Property="Fill" Value="#FF3296AF"/>
-                                <!--<Setter TargetName="MiddlePart" Property="Fill" Value="Transparent"/>-->
+                                <Setter TargetName="MiddlePart" Property="Fill" Value="Transparent"/>
                                 <Setter TargetName="RightPart" Property="Fill" Value="#FF3296AF"/>
                             </Trigger>
                             <Trigger Property ="IsEnabled" Value ="False">
-                                <!--<Setter TargetName="LeftPart" Property="Fill" Value="LightCyan"/>-->
+                                <Setter TargetName="LeftPart" Property="Fill" Value="LightCyan"/>
                                 <Setter TargetName="MiddlePart" Property="Fill" Value="#FF3296AF"/>
                                 <Setter TargetName="RightPart" Property="Fill" Value="LightCyan"/>
-                                
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--#endregion-->
 
 
+
+        </ResourceDictionary>
     </Application.Resources>
+        
+
 </Application>
+
+
+

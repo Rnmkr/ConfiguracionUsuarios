@@ -45,7 +45,7 @@
                 </Style>
             </ListBox.Resources>
         </ListBox>-->
-        <ListView x:Name="lvPermisos" Grid.Row="1" Margin="10,10,10,35" >
+        <ListView x:Name="lvPermisos" Grid.Row="1" Margin="10,10,10,35" FontFamily="Consolas" >
             <ListView.View>
                 <GridView x:Name="gv">
                     <GridViewColumn x:Name="gridClm_SelectRow" Width="auto">
