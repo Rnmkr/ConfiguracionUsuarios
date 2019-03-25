@@ -19,6 +19,9 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [StringLength(48)]
         public string HashedPassword { get; set; }
 
+        [StringLength(24)]
+        public string HashSalt { get; set; }
+
         public virtual Usuario Usuario { get; set; }
     }
 }

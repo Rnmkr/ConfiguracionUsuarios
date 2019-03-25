@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using IngresoPedidos.Helpers;
 
 namespace ConfiguracionUsuarios
 {
@@ -14,7 +15,7 @@ namespace ConfiguracionUsuarios
     /// </summary>
     public partial class SupaWindow : Window
     {
-        IEnumerable<Button> listaBotones;
+        
 
         public SupaWindow()
         {
@@ -27,6 +28,8 @@ namespace ConfiguracionUsuarios
             //{
             //    CargarUsuarios(null);
             //}
+            StaticData.DataBaseContext = new DBContext();
+            StaticData.ListaPermisos = StaticData.DataBaseContext.PermisoView.Select(s => s).ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

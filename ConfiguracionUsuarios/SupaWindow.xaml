@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="SupaWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="SingleBorderWindow" >
+        Title="SupaWindow" Name="SupaWindows" Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="SingleBorderWindow" >
 
     <!--<Grid>
         <Grid.ColumnDefinitions>
@@ -170,8 +170,7 @@
                     <!--<Image Height="80" VerticalAlignment="Bottom"/>-->
 
                 </Grid>
-
-                <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" Height="640" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=GridMain, Path=Height, Mode=TwoWay}" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemHome" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="User" Height="25" Width="25" Margin="5"/>
@@ -317,6 +316,7 @@
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
+
             </StackPanel>
         </Grid>
     </Grid>

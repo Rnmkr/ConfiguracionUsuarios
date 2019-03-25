@@ -6,7 +6,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Permiso-Usuario")]
+    [Table("PermisoUsuario")]
     public partial class PermisoUsuario
     {
         [Key]
@@ -17,7 +17,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int FK_IDPermiso { get; set; }
+        public short FK_IDPermiso { get; set; }
 
         [Key]
         [Column(Order = 2)]

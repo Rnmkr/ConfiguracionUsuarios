@@ -6,24 +6,24 @@ namespace ConfiguracionUsuarios.DataAccessLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Aplicacion")]
-    public partial class Aplicacion
+    [Table("Estado")]
+    public partial class Estado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Aplicacion()
+        public Estado()
         {
-            Permiso = new HashSet<Permiso>();
+            Pedido = new HashSet<Pedido>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public byte IDAplicacion { get; set; }
+        public byte IDEstado { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string NombreAplicacion { get; set; }
+        [StringLength(11)]
+        public string NombreEstado { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Permiso> Permiso { get; set; }
+        public virtual ICollection<Pedido> Pedido { get; set; }
     }
 }

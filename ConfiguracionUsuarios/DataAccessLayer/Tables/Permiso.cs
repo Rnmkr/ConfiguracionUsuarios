@@ -16,9 +16,9 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         }
 
         [Key]
-        public int IDPermiso { get; set; }
+        public short IDPermiso { get; set; }
 
-        public int FK_IDAplicacion { get; set; }
+        public byte FK_IDAplicacion { get; set; }
 
         [Required]
         [StringLength(50)]

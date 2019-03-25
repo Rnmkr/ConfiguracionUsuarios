@@ -71,16 +71,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataAccessLayer\BooleanToVisibilityConverter.cs" />
     <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
+    <Compile Include="DataAccessLayer\Tables\Autorizacion.cs" />
+    <Compile Include="DataAccessLayer\Tables\BooleanToVisibilityConverter.cs" />
+    <Compile Include="DataAccessLayer\Tables\Categoria.cs" />
+    <Compile Include="DataAccessLayer\Tables\Componente.cs" />
     <Compile Include="DataAccessLayer\DBContext.cs" />
+    <Compile Include="DataAccessLayer\Tables\Despacho.cs" />
+    <Compile Include="DataAccessLayer\Tables\Estado.cs" />
+    <Compile Include="DataAccessLayer\Tables\Falla.cs" />
+    <Compile Include="DataAccessLayer\Tables\Imagen.cs" />
+    <Compile Include="DataAccessLayer\Tables\Insumo.cs" />
+    <Compile Include="DataAccessLayer\Tables\Modelo.cs" />
+    <Compile Include="DataAccessLayer\Tables\Observacion.cs" />
+    <Compile Include="DataAccessLayer\Tables\Orden.cs" />
     <Compile Include="DataAccessLayer\Tables\Password.cs" />
     <Compile Include="DataAccessLayer\Tables\Pedido.cs" />
+    <Compile Include="DataAccessLayer\Views\PedidoView.cs" />
     <Compile Include="DataAccessLayer\Tables\Permiso.cs" />
-    <Compile Include="DataAccessLayer\Views\PermisoView.cs" />
     <Compile Include="DataAccessLayer\Tables\PermisoUsuario.cs" />
+    <Compile Include="DataAccessLayer\Views\PermisoView.cs" />
+    <Compile Include="DataAccessLayer\Tables\Producto.cs" />
+    <Compile Include="DataAccessLayer\Tables\Reparacion.cs" />
+    <Compile Include="DataAccessLayer\Tables\ReprocesoPedido.cs" />
+    <Compile Include="DataAccessLayer\Tables\sysdiagrams.cs" />
     <Compile Include="DataAccessLayer\Tables\Usuario.cs" />
     <Compile Include="DataAccessLayer\Views\UsuarioView.cs" />
+    <Compile Include="DataAccessLayer\Tables\Version.cs" />
     <Compile Include="ListaUsuarios.xaml.cs">
       <DependentUpon>ListaUsuarios.xaml</DependentUpon>
     </Compile>
@@ -226,12 +243,6 @@
     <Resource Include="Resources\xls_64x64.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IngresoPedidos\IngresoPedidos\IngresoPedidos.csproj">
-      <Project>{db9ed62a-147f-4a6f-b690-0e5d3c682f13}</Project>
-      <Name>IngresoPedidos</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\suggestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IngresoPedidos\IngresoPedidos\IngresoPedidos.csproj">
+      <Project>{db9ed62a-147f-4a6f-b690-0e5d3c682f13}</Project>
+      <Name>IngresoPedidos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
