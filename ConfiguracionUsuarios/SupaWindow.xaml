@@ -94,14 +94,14 @@
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="50"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="200"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="CloseMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
                 <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="50"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
@@ -117,7 +117,7 @@
 
     <Grid Background="#FFDEDEDE">
 
-        <Grid x:Name="GridMain" Margin="75,50,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid x:Name="GridMain" Margin="50,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="79*"/>
             <ColumnDefinition Width="32*"/>
@@ -125,12 +125,12 @@
         </Grid.ColumnDefinitions>-->
 
 
-        <Grid Height="50" VerticalAlignment="Top" Background="#FF5C99D6">
+        <!--<Grid Height="25" VerticalAlignment="Top" Background="#FF31577E">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
+                <DropShadowEffect BlurRadius="1" ShadowDepth="0" Color="#FFACACAC"/>
             </Grid.Effect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="Sebastián Sanchez" VerticalAlignment="Center" Foreground="White" FontSize="16"/>
+                <TextBlock Text="Sebastián Sanchez" VerticalAlignment="Center" Foreground="#FF5C99D6" FontSize="16"/>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="0" >
                     <StackPanel Width="150">
                         <Button Content="Settings"/>
@@ -142,15 +142,15 @@
                 </materialDesign:PopupBox>
 
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="16">ADMINISTRACION DE USUARIOS</TextBlock>
-        </Grid>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5C99D6" FontSize="16">ADMINISTRACION DE USUARIOS</TextBlock>
+        </Grid>-->
 
-        <Grid x:Name="GridMenu" Width="75" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
+                <DropShadowEffect BlurRadius="0" ShadowDepth="0" Color="#FFAEAEAE"/>
             </Grid.Effect>
             <StackPanel>
-                <Grid Height="100" Background="White" RenderTransformOrigin="0.5,0.5">
+                <Grid Height="50" Background="White" RenderTransformOrigin="0.5,0.5">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -170,35 +170,35 @@
                     <!--<Image Height="80" VerticalAlignment="Bottom"/>-->
 
                 </Grid>
-                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=GridMain, Path=Height, Mode=TwoWay}" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=GridMain, Path=Height, Mode=TwoWay}" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemHome" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="User" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="25 10"/>
+                            <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Rca" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Create" VerticalAlignment="Center" Margin="25 10"/>
+                            <TextBlock Text="Pedidos" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Tickets" VerticalAlignment="Center"  Margin="25 10"/>
+                            <TextBlock Text="Piezas" VerticalAlignment="Center"  Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center"  Margin="25 10"/>
+                            <TextBlock Text="Productos" VerticalAlignment="Center"  Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemHome1" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountKey" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="25 10"/>
+                            <TextBlock Text="Autorizaciones" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemHome2" Height="50">

@@ -15,7 +15,8 @@ namespace ConfiguracionUsuarios
     /// </summary>
     public partial class SupaWindow : Window
     {
-        
+
+        public Thickness DGMargin { get; set; }
 
         public SupaWindow()
         {
@@ -30,6 +31,8 @@ namespace ConfiguracionUsuarios
             //}
             StaticData.DataBaseContext = new DBContext();
             StaticData.ListaPermisos = StaticData.DataBaseContext.PermisoView.Select(s => s).ToList();
+            DGMargin = new Thickness(GridMenu.Width, 50, 0, 0);
+            GridMain.Margin = DGMargin;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
