@@ -60,7 +60,7 @@
                 </StackPanel>
             </Grid>
 
-                <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" materialDesign:DataGridAssist.CellPadding="4 2 2 2" materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
 
 
                     <DataGrid.Resources>
