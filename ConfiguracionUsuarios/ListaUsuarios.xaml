@@ -21,7 +21,7 @@
             <Grid Background="#FF1885A1" Grid.Row="0" Margin="0">
 
 
-                    <Grid>
+                    <ToolBarTray>
                         <ToolBar Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
                             <Button ToolTip="Follow me on Twitter" >
                                 <materialDesign:PackIcon Kind="UserEdit" />
@@ -30,7 +30,7 @@
                             </Button>
                             
                         </ToolBar>
-                    </Grid>
+                    </ToolBarTray>
 
 
                     <!--<Rectangle Grid.Column="0" Stroke="#FFABADB3" >
