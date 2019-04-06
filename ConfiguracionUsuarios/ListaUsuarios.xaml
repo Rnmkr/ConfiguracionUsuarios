@@ -60,9 +60,10 @@
                 </StackPanel>
             </Grid>
 
-            <DataGrid Name="dgUsuarios" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" materialDesign:DataGridAssist.CellPadding="4 2 2 2" materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" HeadersVisibility="Column" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
 
-                <DataGrid.Resources>
+
+                    <DataGrid.Resources>
                     <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
                     <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
                 </DataGrid.Resources>
@@ -105,7 +106,7 @@
                     </ContextMenu>
                 </DataGrid.ContextMenu>
 
-                <DataGrid.ColumnHeaderStyle>
+                <!--<DataGrid.ColumnHeaderStyle>
                     <StaticResource ResourceKey="ColumnHeaderStyle"/>
                 </DataGrid.ColumnHeaderStyle>
                 <DataGrid.CellStyle>
@@ -113,7 +114,7 @@
                 </DataGrid.CellStyle>
                 <DataGrid.RowStyle>
                     <StaticResource ResourceKey="DataGridRowZebra"/>
-                </DataGrid.RowStyle>
+                </DataGrid.RowStyle>-->
 
                 <!--<DataGrid.Columns>-->
                 <DataGrid.Columns>

@@ -39,7 +39,7 @@
 
 
         
-        <Style x:Name="MainDataGridStyle" TargetType="{x:Type DataGrid}">
+        <!--<Style x:Name="MainDataGridStyle" TargetType="{x:Type DataGrid}">
             <Setter Property="Height" Value="Auto" />
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="#FFABADB3"/>
@@ -175,7 +175,7 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
+        </Style>-->
         
 
 
