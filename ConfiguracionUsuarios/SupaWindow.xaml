@@ -147,11 +147,12 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5C99D6" FontSize="16">ADMINISTRACION DE USUARIOS</TextBlock>
         </Grid>-->
 
-        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="White">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="0" ShadowDepth="0" Color="#FFAEAEAE"/>
-                </Grid.Effect>
-                <StackPanel>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="3" Color="#FFAEAEAE"/>
+            </Grid.Effect>
+            
+            <StackPanel>
                 <Grid Height="50" Background="White" RenderTransformOrigin="0.5,0.5">
                     <Grid.RenderTransform>
                         <TransformGroup>
@@ -172,8 +173,8 @@
                     <!--<Image Height="80" VerticalAlignment="Bottom"/>-->
 
                 </Grid>
-                
-                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+
+                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemConfiguration" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="LoginVariant" Height="25" Width="25" Margin="5"/>
