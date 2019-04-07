@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="LightGray">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
             <Grid Name="mainGrid">
@@ -18,19 +18,22 @@
                 
 
 
-            <Grid Background="#FF1885A1" Grid.Row="0" Margin="0">
+            <Grid Background="Transparent" Grid.Row="0" Margin="0">
 
 
-                    <ToolBarTray>
-                        <ToolBar Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
-                            <Button ToolTip="Follow me on Twitter" >
-                                <materialDesign:PackIcon Kind="UserEdit" />
+                        <Grid Background="#FF31577E">
+                        <StackPanel Background="Transparent" Orientation="Horizontal" Margin="5" >
+                        <!--<ToolBar Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False" Background="Transparent">-->
+                            <Button ToolTip="Follow me on Twitter" Margin="0" Background="Transparent" BorderThickness="0">
+                                <materialDesign:PackIcon Kind="UserEdit" Foreground="LawnGreen"  Width="25" Height="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </Button>
-                            <Button ToolTip="Save"> <materialDesign:PackIcon Kind="Search" />
+                            <Button ToolTip="Save" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Background="Transparent" BorderThickness="0">
+                                <materialDesign:PackIcon Kind="Search" Foreground="LawnGreen" Width="25" Height="25" />
                             </Button>
                             
-                        </ToolBar>
-                    </ToolBarTray>
+                        <!--</ToolBar>-->
+                    </StackPanel>
+                        </Grid>
 
 
                     <!--<Rectangle Grid.Column="0" Stroke="#FFABADB3" >
