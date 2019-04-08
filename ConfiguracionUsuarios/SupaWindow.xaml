@@ -147,9 +147,9 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5C99D6" FontSize="16">ADMINISTRACION DE USUARIOS</TextBlock>
         </Grid>-->
 
-        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="White">
+        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="2" ShadowDepth="3" Color="#FFAEAEAE"/>
+                <DropShadowEffect BlurRadius="0" ShadowDepth="0" Color="#FFAEAEAE"/>
             </Grid.Effect>
             
             <StackPanel>
