@@ -101,12 +101,52 @@
                 <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
 
 
-                    <!--<DataGrid.Resources>
-                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
-                    --><!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>--><!--
-                </DataGrid.Resources>-->
+                    <DataGrid.Resources>
+                    <!--<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>-->
+                    <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
+                        <!--<Style TargetType="{x:Type DataGridCell}" x:Key="CStyle">
+                            <Style.Setters>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            </Style.Setters>
+                        </Style>
+                        <Style TargetType="{x:Type DataGridCheckBoxColumn}" x:Key="CBStyle">
+                            <Style.Setters>
+                                <Setter Property="CellStyle" Value="{StaticResource CStyle}">
+                                </Setter>
+                            </Style.Setters>
+                        </Style>-->
+                </DataGrid.Resources>
 
-                <DataGrid.ContextMenu>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
+                        <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}"/>
+                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
+                        <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style TargetType="CheckBox">
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                </Style>
+                            </DataGridCheckBoxColumn.ElementStyle>
+                        </DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn Header="RFID" Binding="{Binding HashedRFID, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style TargetType="CheckBox">
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                </Style>
+                            </DataGridCheckBoxColumn.ElementStyle>
+                        </DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
+                            <DataGridCheckBoxColumn.ElementStyle>
+                                <Style TargetType="CheckBox">
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                </Style>
+                            </DataGridCheckBoxColumn.ElementStyle>
+                        </DataGridCheckBoxColumn>
+                    </DataGrid.Columns>
+
+
+
+                    <DataGrid.ContextMenu>
                     <ContextMenu>
                         <MenuItem x:Name="ctxmnuEditarusuario" Click="ctxmnuEditarusuario_Click" Header="Editar datos" InputGestureText="Ctrl+E">
                             <MenuItem.Icon>
@@ -155,14 +195,7 @@
                 </DataGrid.RowStyle>-->
 
                 <!--<DataGrid.Columns>-->
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
-                    <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}"/>
-                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
-                    <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
-                    <DataGridCheckBoxColumn Header="RFID" Binding="{Binding HashedRFID, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
-                    <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True"/>
-                </DataGrid.Columns>
+                
 
                 <!--<DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"  />
                 <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}" />

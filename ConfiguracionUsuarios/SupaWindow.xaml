@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ConfiguracionUsuarios"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="SupaWindow" Name="SupaWindows" Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" >
+        Title="SupaWindow" Name="SupaWindows" Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
 
     <!--<Grid>
         <Grid.ColumnDefinitions>
