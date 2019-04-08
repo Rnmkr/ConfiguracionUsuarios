@@ -101,13 +101,23 @@
     <Compile Include="ListaUsuarios.xaml.cs">
       <DependentUpon>ListaUsuarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainLogin.xaml.cs">
       <DependentUpon>MainLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="SupaWindow.xaml.cs">
       <DependentUpon>SupaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserCard.xaml.cs">
+      <DependentUpon>UserCard.xaml</DependentUpon>
+    </Compile>
     <Page Include="ListaUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +152,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SupaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,6 +285,9 @@
       <Project>{db9ed62a-147f-4a6f-b690-0e5d3c682f13}</Project>
       <Name>IngresoPedidos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\card.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

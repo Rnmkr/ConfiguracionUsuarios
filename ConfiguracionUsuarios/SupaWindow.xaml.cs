@@ -72,6 +72,10 @@ namespace ConfiguracionUsuarios
                     //contentControl.Content = iplp;
                 }
             }
+            UserControl usc = null;
+            GridMain.Children.Clear();
+            usc = new LoginControl();
+            GridMain.Children.Add(usc);
         }
 
         private void SelectUnselectButtons(object clickedButton)
@@ -226,6 +230,10 @@ namespace ConfiguracionUsuarios
                     break;
                 case "ItemCreate":
                     usc = new IngresoPedidos.ListaPedidos();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "Login":
+                    usc = new LoginControl();
                     GridMain.Children.Add(usc);
                     break;
                 default:

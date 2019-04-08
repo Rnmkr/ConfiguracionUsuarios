@@ -28,17 +28,19 @@ namespace ConfiguracionUsuarios
 
         private void ctxmnuEditarusuario_Click(object sender, RoutedEventArgs e)
         {
-            NuevoUsuarioWindow aw = new NuevoUsuarioWindow((UsuarioView)dgUsuarios.SelectedItem);
-            aw.Owner = Window.GetWindow(this.Parent);
-            if (aw.ShowDialog() != null)
-            {
-                dgUsuarios.ItemsSource = null;
-                dgUsuarios.ItemsSource = databaseContext.UsuarioView.Select(s => s).ToList();
-                //dgUsuarios.SelectedIndex = dgUsuarios.Items.Count - 1;
-                //dgUsuarios.SelectedItem = dgUsuarios.SelectedIndex;
-                //dgUsuarios.ScrollIntoView(dgUsuarios.SelectedItem);
-                //EditarPermisos((UsuarioView)dgUsuarios.SelectedItem);
-            }
+            UserCard userCard = new UserCard();
+            userCard.ShowDialog();
+            //NuevoUsuarioWindow aw = new NuevoUsuarioWindow((UsuarioView)dgUsuarios.SelectedItem);
+            //aw.Owner = Window.GetWindow(this.Parent);
+            //if (aw.ShowDialog() != null)
+            //{
+            //    dgUsuarios.ItemsSource = null;
+            //    dgUsuarios.ItemsSource = databaseContext.UsuarioView.Select(s => s).ToList();
+            //    //dgUsuarios.SelectedIndex = dgUsuarios.Items.Count - 1;
+            //    //dgUsuarios.SelectedItem = dgUsuarios.SelectedIndex;
+            //    //dgUsuarios.ScrollIntoView(dgUsuarios.SelectedItem);
+            //    //EditarPermisos((UsuarioView)dgUsuarios.SelectedItem);
+            //}
         }
 
         private void EditarPermisos(UsuarioView usuario)

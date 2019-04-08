@@ -175,22 +175,22 @@
                 </Grid>
 
                 <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                    <ListViewItem x:Name="ItemConfiguration" Height="50">
+                    <ListViewItem x:Name="Login" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="LoginVariant" Height="25" Width="25" Margin="5"/>
                             <TextBlock Text="Configuarción" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="ItemHome" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Users" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="FileDocument" Height="25" Width="25" Margin="5"/>
                             <TextBlock Text="Pedidos" VerticalAlignment="Center" Margin="25 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemHome" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Users" Height="25" Width="25" Margin="5"/>
+                            <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="50">
