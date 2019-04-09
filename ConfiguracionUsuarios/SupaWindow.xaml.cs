@@ -33,6 +33,10 @@ namespace ConfiguracionUsuarios
             StaticData.ListaPermisos = StaticData.DataBaseContext.PermisoView.Select(s => s).ToList();
             //DGMargin = new Thickness(GridMenu.Width, 50, 0, 0);
             //GridMain.Margin = DGMargin;
+            UserControl usc = null;
+            GridMain.Children.Clear();
+            usc = new LoginControl();
+            GridMain.Children.Add(usc);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -72,10 +76,8 @@ namespace ConfiguracionUsuarios
                     //contentControl.Content = iplp;
                 }
             }
-            UserControl usc = null;
-            GridMain.Children.Clear();
-            usc = new LoginControl();
-            GridMain.Children.Add(usc);
+
+
         }
 
         private void SelectUnselectButtons(object clickedButton)

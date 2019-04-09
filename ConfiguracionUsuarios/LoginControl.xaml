@@ -8,17 +8,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
             <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
-    <Grid VerticalAlignment="Center">
+        <Grid VerticalAlignment="Center" FocusManager.FocusedElement="{Binding ElementName=tbLegajo}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock Name="tblTitulo" Grid.Row="0" Style="{StaticResource MaterialDesignDisplay3TextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"> Sistema Manager de Producción </TextBlock>
+            <TextBlock Name="tblTitulo" Grid.Row="0" Style="{StaticResource MaterialDesignDisplay3TextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"> Gestión de la Producción </TextBlock>
             <TextBox Name="tbLegajo" Grid.Row="1" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0" materialDesign:HintAssist.Hint="Legajo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <PasswordBox x:Name="pbPassword" Grid.Row="2" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-            <Button Name="btnAceptar" Grid.Row="3" Content="INGRESAR" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Click="BtnAceptar_Click">
+            <Button Name="btnAceptar" Grid.Row="3" IsDefault="True" Content="INGRESAR" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Click="BtnAceptar_Click">
             </Button>
 
     </Grid>
