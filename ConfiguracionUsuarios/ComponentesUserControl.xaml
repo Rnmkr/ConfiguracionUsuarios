@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="ConfiguracionUsuarios.ComponentesUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ConfiguracionUsuarios"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="720">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
+            <Grid Name="mainGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.ColumnSpan="2" Margin="0">
+                    <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <ListViewItem x:Name="ItemConfiguration" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem x:Name="ItemHome" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                        </StackPanel>
+                    </ListView>
+                </Grid>
+                <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14"  ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                    <DataGrid.Resources>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ARTICULO" Binding="{Binding ArticuloComponente}"/>
+                        <DataGridTextColumn Header="CATEGORIA" Binding="{Binding CategoriaComponente}"/>
+                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreComponente}"/>
+                        <DataGridTextColumn Header="VERSION" Binding="{Binding CategoriaComponente}"/>
+                        <DataGridTextColumn Header="ORDEN" Binding="{Binding CategoriaComponente}"/>
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem x:Name="ctxmnuEditarusuario"  Header="Editar datos" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="ctxmnuEditarPermisos"  Header="Editar Permisos" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="ctxmnuResetPassword"  Header="Blanquear Password" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="ctxmnuResetRFID"  Header="Blanquear RFID" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="ctxmnuEliminarUsuario"  Header="Activar/Desactivar" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+
+                <DataGrid Name="dgUsuarios2" Grid.Column="1" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14"  ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                    <DataGrid.Resources>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ARTICULO" Binding="{Binding ArticuloComponente}"/>
+                        <DataGridTextColumn Header="CATEGORIA" Binding="{Binding CategoriaComponente}"/>
+                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreComponente}"/>
+                        <DataGridTextColumn Header="VERSION" Binding="{Binding CategoriaComponente}"/>
+                        <DataGridTextColumn Header="ORDEN" Binding="{Binding CategoriaComponente}"/>
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem x:Name="ctxmnuEditarusuario2"  Header="Editar datos" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="ctxmnuEditarPermisos2"  Header="Editar Permisos" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="ctxmnuResetPassword2"  Header="Blanquear Password" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="ctxmnuResetRFID2"  Header="Blanquear RFID" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem x:Name="ctxmnuEliminarUsuario2"  Header="Activar/Desactivar" InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

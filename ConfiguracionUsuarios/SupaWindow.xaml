@@ -193,7 +193,7 @@
                             <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="50">
+                    <ListViewItem x:Name="Piezas" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="5"/>
                             <TextBlock Text="Piezas" VerticalAlignment="Center"  Margin="25 10"/>

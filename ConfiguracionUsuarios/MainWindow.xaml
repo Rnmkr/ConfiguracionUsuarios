@@ -88,7 +88,7 @@
                     </MenuItem>
                 </ContextMenu>
             </DataGrid.ContextMenu>
-            <DataGrid.ColumnHeaderStyle>
+            <!--<DataGrid.ColumnHeaderStyle>
                 <StaticResource ResourceKey="ColumnHeaderStyle"/>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.CellStyle>
@@ -96,7 +96,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowStyle>
                 <StaticResource ResourceKey="DataGridRowZebra"/>
-            </DataGrid.RowStyle>
+            </DataGrid.RowStyle>-->
 
             <DataGrid.Columns>
 

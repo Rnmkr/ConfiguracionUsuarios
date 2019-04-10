@@ -6,37 +6,36 @@
              xmlns:local="clr-namespace:ConfiguracionUsuarios"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
-              ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="None" Width="448" Height="531" >
-    <Grid Margin="0,0,0,0" Width="442" Height="502">
+              ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Width="890.092" Height="320" >
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="226"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="226"/>
-            <RowDefinition Height="214"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Button Name="btnGuardar" Content="GUARDAR" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Margin="0" Grid.Row="2" VerticalAlignment="Center" Height="32" Click="Button_Click"/>
-        <Border Grid.Column="0" BorderThickness="1" BorderBrush="LightGray" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16,19,15,11" Grid.Row="0">
+        <Button Name="btnGuardar" Content="GUARDAR" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Margin="0" Grid.Row="2" VerticalAlignment="Center" Height="32" Click="Button_Click" Padding="0" Width="100"/>
+        <Border BorderThickness="1" BorderBrush="LightGray" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5" Padding="5">
             <Image Source="/ConfiguracionUsuarios;component/Resources/card.png" Margin="5"/>
         </Border>
         <TextBox x:Name="NameTextBox4" Text="José" Grid.Column="1" Grid.Row="0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0" materialDesign:HintAssist.Hint="Nombre" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Bold"/>
-        <TextBox x:Name="NameTextBox5" Text="Pompilio" Grid.Column="1" Grid.Row="0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" materialDesign:HintAssist.Hint="Apellido" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Bold"/>
-        <TextBox x:Name="NameTextBox6" Text="925" Grid.Column="1" Grid.Row="0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,95,0,0" materialDesign:HintAssist.Hint="Legajo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <TextBox x:Name="NameTextBox5" Text="Pompilio" Grid.Column="1" Grid.Row="0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,45,-9,0" materialDesign:HintAssist.Hint="Apellido" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <TextBox x:Name="NameTextBox6" Text="925" Grid.Column="1" Grid.Row="0" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,86,-9,0" materialDesign:HintAssist.Hint="Legajo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Bold"/>
 
-        <TextBox x:Name="NameTextBox1" Text="11-3643-9181" Grid.Column="0" Grid.Row="1" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0" materialDesign:HintAssist.Hint="Teléfono" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Normal"/>
-        <TextBox x:Name="NameTextBox2" Text="milveintiuno@gmail.com" Grid.Column="0" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,47,0,0" materialDesign:HintAssist.Hint="e-mail" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
-        <TextBox x:Name="NameTextBox21" Text="josep@exo.com.ar" Grid.Column="1" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0" materialDesign:HintAssist.Hint="e-mail EXO" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
-        <TextBox x:Name="NameTextBox22" Text="Av. Pavon 3731" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,89,0,0" materialDesign:HintAssist.Hint="Dirección" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
-        <TextBox x:Name="NameTextBox3" Text="12A" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,131,0,0" materialDesign:HintAssist.Hint="Piso/Depto." Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
-        <TextBox x:Name="NameTextBox7" Text="CABA" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,173,0,0" materialDesign:HintAssist.Hint="Ciudad" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
+        <TextBox x:Name="NameTextBox1" Text="11-3643-9181"  Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,240,-214,0" materialDesign:HintAssist.Hint="Teléfono" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI" FontWeight="Normal"/>
+        <TextBox x:Name="NameTextBox2" Text="milveintiuno@gmail.com" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,50,-434,0" materialDesign:HintAssist.Hint="e-mail" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
+        <TextBox x:Name="NameTextBox21" Text="josep@exo.com.ar" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,96,-214,0" materialDesign:HintAssist.Hint="e-mail EXO" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
+        <TextBox x:Name="NameTextBox22" Text="Av. Pavon 3731" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,96,-434,0" materialDesign:HintAssist.Hint="Dirección" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" Grid.Column="1"/>
+        <TextBox x:Name="NameTextBox3" Text="12A"  Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,131,0,0" materialDesign:HintAssist.Hint="Piso/Depto." Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
+        <TextBox x:Name="NameTextBox7" Text="CABA" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,192,-434,0" materialDesign:HintAssist.Hint="Ciudad" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" Grid.Column="1"/>
 
-        <TextBox x:Name="NameTextBox8" Text="20-30582257-5" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,89,0,0" materialDesign:HintAssist.Hint="CUIT" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Column="1" Height="40"/>
-        <TextBox x:Name="NameTextBox9" Text="26/12/1983" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0" materialDesign:HintAssist.Hint="Fecha de Nacimiento" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Column="1" Height="40"/>
-        <TextBox x:Name="NameTextBox10" Text="08/10/2011" Grid.Column="1" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,131,0,0" materialDesign:HintAssist.Hint="Fecha de Ingreso" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
-        <ComboBox x:Name="NameTextBox11" SelectedIndex="2" Text="Producción" Grid.Column="1" Grid.Row="0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,140,0,0" materialDesign:HintAssist.Hint="Sector" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40">
+        <TextBox x:Name="NameTextBox8" Text="20-30582257-5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,186,-214,0" materialDesign:HintAssist.Hint="CUIT" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Column="1" Height="40"/>
+        <TextBox x:Name="NameTextBox9" Text="26/12/1983" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,141,-214,0" materialDesign:HintAssist.Hint="Fecha de Nacimiento" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.Column="1" Height="40"/>
+        <TextBox x:Name="NameTextBox10" Text="08/10/2011" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,5,-434,0" materialDesign:HintAssist.Hint="Fecha de Ingreso" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40"/>
+        <ComboBox x:Name="NameTextBox11" SelectedIndex="2" Text="Producción" Grid.Column="1" Grid.Row="0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,5,-214,0" materialDesign:HintAssist.Hint="Sector" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40">
             <ComboBoxItem>Recepción</ComboBoxItem>
             <ComboBoxItem>Soporte Técnico</ComboBoxItem>
             <ComboBoxItem>Producción</ComboBoxItem>
@@ -44,7 +43,7 @@
             <ComboBoxItem>Recursos Humanos</ComboBoxItem>
             <ComboBoxItem>Ventas</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="NameTextBox14" SelectedIndex="2" Text="Desarrollo de Imágenes" Grid.Column="1" Grid.Row="0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,185,0,0" materialDesign:HintAssist.Hint="Area" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40" RenderTransformOrigin="0.47,3.575">
+        <ComboBox x:Name="NameTextBox14" SelectedIndex="2" Text="Desarrollo de Imágenes" Grid.Column="1" Grid.Row="0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,51,-214,0" materialDesign:HintAssist.Hint="Area" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40" RenderTransformOrigin="0.47,3.575">
             <ComboBoxItem>Técnico Operario</ComboBoxItem>
             <ComboBoxItem>Control de Calidad</ComboBoxItem>
             <ComboBoxItem>Desarrollo de Imágenes</ComboBoxItem>
@@ -53,7 +52,7 @@
             <ComboBoxItem>Gerente de Sector</ComboBoxItem>
             <ComboBoxItem>Administrativo</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="NameTextBox1w4" Text="Vinculado" SelectedIndex="0" Grid.Column="1" Grid.Row="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,173,0,0" materialDesign:HintAssist.Hint="Estado" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40">
+        <ComboBox x:Name="NameTextBox1w4" Text="Vinculado" SelectedIndex="0" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,142,-434,0" materialDesign:HintAssist.Hint="Estado" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="40">
             <ComboBoxItem>Vinculado</ComboBoxItem>
             <ComboBoxItem>Desvinculado</ComboBoxItem>
             <ComboBoxItem>Suspendido</ComboBoxItem>

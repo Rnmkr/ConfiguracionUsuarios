@@ -238,6 +238,10 @@ namespace ConfiguracionUsuarios
                     usc = new LoginControl();
                     GridMain.Children.Add(usc);
                     break;
+                case "Piezas":
+                    usc = new ComponentesUserControl();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
             }

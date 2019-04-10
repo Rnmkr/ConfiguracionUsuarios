@@ -37,7 +37,7 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [Key]
         [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CantidadEquipos { get; set; }
+        public short CantidadEquipos { get; set; }
 
         [Key]
         [Column(Order = 6, TypeName = "smalldatetime")]

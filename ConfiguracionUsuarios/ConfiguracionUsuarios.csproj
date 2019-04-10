@@ -71,6 +71,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComponentesUserControl.xaml.cs">
+      <DependentUpon>ComponentesUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
     <Compile Include="DataAccessLayer\Tables\Autorizacion.cs" />
     <Compile Include="DataAccessLayer\Tables\BooleanToVisibilityConverter.cs" />
@@ -113,6 +116,10 @@
     <Compile Include="UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>
     </Compile>
+    <Page Include="ComponentesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ListaUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
