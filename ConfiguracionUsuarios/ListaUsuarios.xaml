@@ -100,25 +100,32 @@
 
                 </StackPanel>-->
                 </Grid>
-
-                <DataGrid Name="dgUsuarios" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
-
-
-                    <DataGrid.Resources>
-                        <!--<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>-->
-                        <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightCyan"/>-->
-                        <!--<Style TargetType="{x:Type DataGridCell}" x:Key="CStyle">
-                            <Style.Setters>
-                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
-                            </Style.Setters>
+ 
+                <DataGrid Name="dgUsuarios" CanUserAddRows="False" IsReadOnly="True" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"  SelectionUnit="FullRow"  AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14" SelectionChanged="DgUsuarios_SelectionChanged" ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                    <!--<DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="BorderThickness" Value="4"/>
+                            <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter Property="Background" Value="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" />
                         </Style>
-                        <Style TargetType="{x:Type DataGridCheckBoxColumn}" x:Key="CBStyle">
-                            <Style.Setters>
-                                <Setter Property="CellStyle" Value="{StaticResource CStyle}">
-                                </Setter>
-                            </Style.Setters>
-                        </Style>-->
-                    </DataGrid.Resources>
+                    </DataGrid.CellStyle>-->
+
+
+
+                    <!--<DataGrid.Resources>
+                        <ResourceDictionary>
+                            <Style  TargetType="{x:Type DataGridCell}">
+                                --><!--<Setter Property="Background" Value="{x:Null}" />
+                                <Setter Property="BorderBrush" Value="{x:Null}" />--><!--
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        --><!--<Setter Property="Background" Value="{x:Null}" />--><!--
+                                        <Setter Property="BorderBrush" Value="{x:Null}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ResourceDictionary>
+                    </DataGrid.Resources>-->
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
