@@ -110,6 +110,7 @@
     <Compile Include="MainLogin.xaml.cs">
       <DependentUpon>MainLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PaletteHelper.cs" />
     <Compile Include="SupaWindow.xaml.cs">
       <DependentUpon>SupaWindow.xaml</DependentUpon>
     </Compile>

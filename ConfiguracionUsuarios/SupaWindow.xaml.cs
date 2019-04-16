@@ -17,6 +17,7 @@ namespace ConfiguracionUsuarios
     {
 
         public Thickness DGMargin { get; set; }
+        public bool isDark { get; set; }
 
         public SupaWindow()
         {
@@ -37,6 +38,7 @@ namespace ConfiguracionUsuarios
             GridMain.Children.Clear();
             usc = new LoginControl();
             GridMain.Children.Add(usc);
+            isDark = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -245,6 +247,20 @@ namespace ConfiguracionUsuarios
                 default:
                     break;
             }
+        }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isDark)
+            {
+                isDark = false;
+            }
+            else
+            {
+                isDark = true;
+            }
+
+            new PaletteHelper().SetLightDark(isDark);
         }
     }
 }
