@@ -11,7 +11,7 @@
         // "data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
 
         public DBContext()
-            : base("data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework")
+            : base("data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
         {
         }
 
@@ -40,6 +40,7 @@
         public virtual DbSet<PedidoView> PedidoView { get; set; }
         public virtual DbSet<PermisoView> PermisoView { get; set; }
         public virtual DbSet<UsuarioView> UsuarioView { get; set; }
+        public virtual DbSet<ComponentesView> ComponentesView { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -370,6 +371,34 @@
 
             modelBuilder.Entity<UsuarioView>()
                 .Property(e => e.HashedRFID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.ArticuloComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.NombreComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.NombreCategoria)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.NombreProducto)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.NombreModelo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.VersionComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponentesView>()
+                .Property(e => e.CodigoOrden)
                 .IsUnicode(false);
         }
     }

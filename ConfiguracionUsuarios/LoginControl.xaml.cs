@@ -38,7 +38,7 @@ namespace ConfiguracionUsuarios
             }
             else
             {
-                tblTitulo.Text = "Schneider Nicolas";
+                tblTitulo.Text = "Bienvenido Schneider Nicolas";
                 tbLegajo.Visibility = Visibility.Collapsed;
                 pbPassword.Visibility = Visibility.Collapsed;
                 btnAceptar.Content = "SALIR";

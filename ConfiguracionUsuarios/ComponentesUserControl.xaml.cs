@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ConfiguracionUsuarios.DataAccessLayer;
 
 namespace ConfiguracionUsuarios
 {
@@ -23,6 +24,8 @@ namespace ConfiguracionUsuarios
         public ComponentesUserControl()
         {
             InitializeComponent();
+            DBContext context = new DBContext();
+            dgComponentes.ItemsSource = context.ComponentesView.Select(s => s).ToList();
         }
     }
 }

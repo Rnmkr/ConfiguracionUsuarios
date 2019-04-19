@@ -74,6 +74,7 @@
     <Compile Include="ComponentesUserControl.xaml.cs">
       <DependentUpon>ComponentesUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataAccessLayer\Views\ComponentesView.cs" />
     <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
     <Compile Include="DataAccessLayer\Tables\Autorizacion.cs" />
     <Compile Include="DataAccessLayer\Tables\BooleanToVisibilityConverter.cs" />
