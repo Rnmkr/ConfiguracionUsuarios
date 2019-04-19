@@ -52,28 +52,19 @@
                                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                                 </MenuItem.Icon>
                             </MenuItem>
-                            <MenuItem x:Name="ctxmnuEditarPermisos"  Header="Editar Permisos" InputGestureText="Ctrl+E">
+                            
+                            <MenuItem x:Name="ctxmnuEditarPermisos"  Header="Ver Imagen" InputGestureText="Ctrl+E">
                                 <MenuItem.Icon>
                                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                                 </MenuItem.Icon>
                             </MenuItem>
-                            <Separator/>
-                            <MenuItem x:Name="ctxmnuResetPassword"  Header="Blanquear Password" InputGestureText="Ctrl+E">
+
+                            <MenuItem x:Name="ctxmnuEditarusuario2"  Header="Duplicar..." InputGestureText="Ctrl+E">
                                 <MenuItem.Icon>
                                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
                                 </MenuItem.Icon>
                             </MenuItem>
-                            <MenuItem x:Name="ctxmnuResetRFID"  Header="Blanquear RFID" InputGestureText="Ctrl+E">
-                                <MenuItem.Icon>
-                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <Separator/>
-                            <MenuItem x:Name="ctxmnuEliminarUsuario"  Header="Activar/Desactivar" InputGestureText="Ctrl+E">
-                                <MenuItem.Icon>
-                                    <Image Source="/ConfiguracionUsuarios;component/Resources/quitar_16x16.ico"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
+
                         </ContextMenu>
                     </DataGrid.ContextMenu>
                 </DataGrid>

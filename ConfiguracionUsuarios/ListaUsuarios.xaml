@@ -131,20 +131,33 @@
                         <DataGridTextColumn Header="LEGAJO" Binding="{Binding LegajoUsuario}"/>
                         <DataGridTextColumn Header="APELLIDO" Binding="{Binding ApellidoUsuario}"/>
                         <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreUsuario}"/>
+                        <!--PASSWORD-->
                         <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
                             <DataGridCheckBoxColumn.ElementStyle>
                                 <Style TargetType="CheckBox">
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding HashedPassword}" Value="{x:Null}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </DataGridCheckBoxColumn.ElementStyle>
                         </DataGridCheckBoxColumn>
+                        <!--RFID-->
                         <DataGridCheckBoxColumn Header="RFID" Binding="{Binding HashedRFID, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
                             <DataGridCheckBoxColumn.ElementStyle>
                                 <Style TargetType="CheckBox">
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding HashedRFID}" Value="{x:Null}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
                             </DataGridCheckBoxColumn.ElementStyle>
                         </DataGridCheckBoxColumn>
+                        <!--ACTIVO-->
                         <DataGridCheckBoxColumn x:Name="cbcEstadoUsuario" Header="ACTIVO" Binding="{Binding EstadoUsuario, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
                             <DataGridCheckBoxColumn.ElementStyle>
                                 <Style TargetType="CheckBox">
