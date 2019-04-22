@@ -74,7 +74,7 @@
     <Compile Include="ComponentesUserControl.xaml.cs">
       <DependentUpon>ComponentesUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataAccessLayer\Views\ComponentesView.cs" />
+    <Compile Include="DataAccessLayer\Views\ComponenteView.cs" />
     <Compile Include="DataAccessLayer\Tables\Aplicacion.cs" />
     <Compile Include="DataAccessLayer\Tables\Autorizacion.cs" />
     <Compile Include="DataAccessLayer\Tables\BooleanToVisibilityConverter.cs" />
@@ -112,6 +112,9 @@
       <DependentUpon>MainLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="PaletteHelper.cs" />
+    <Compile Include="ProdModFall.xaml.cs">
+      <DependentUpon>ProdModFall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SupaWindow.xaml.cs">
       <DependentUpon>SupaWindow.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProdModFall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SupaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

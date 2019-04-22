@@ -6,8 +6,8 @@ namespace ConfiguracionUsuarios.DataAccessLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ComponentesView")]
-    public partial class ComponentesView
+    [Table("ComponenteView")]
+    public partial class ComponenteView
     {
         [Key]
         [Column(Order = 0)]
@@ -27,8 +27,6 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [StringLength(25)]
         public string NombreProducto { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
         [StringLength(25)]
         public string NombreModelo { get; set; }
 

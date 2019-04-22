@@ -204,10 +204,10 @@
                             <TextBlock Text="Piezas" VerticalAlignment="Center"  Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="50">
+                    <ListViewItem Height="50" x:Name="ProdModFall">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Productos" VerticalAlignment="Center"  Margin="25 10"/>
+                            <TextBlock Text="ProModFall" VerticalAlignment="Center"  Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemHome1" Height="50">

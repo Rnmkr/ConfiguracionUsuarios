@@ -17,15 +17,17 @@ using ConfiguracionUsuarios.DataAccessLayer;
 namespace ConfiguracionUsuarios
 {
     /// <summary>
-    /// Interaction logic for Componentes.xaml
+    /// Interaction logic for ProdModFall.xaml
     /// </summary>
-    public partial class ComponentesUserControl : UserControl
+    public partial class ProdModFall : UserControl
     {
-        public ComponentesUserControl()
+        public ProdModFall()
         {
             InitializeComponent();
             DBContext context = new DBContext();
-            dgComponentes.ItemsSource = context.ComponenteView.Select(s => s).ToList();
+            Proli.ItemsSource = context.Producto.Select(s => s.NombreProducto).ToList();
+            Moli.ItemsSource = context.Modelo.Select(s => s.NombreModelo).ToList();
+            Cali.ItemsSource = context.Categoria.Select(s => s.NombreCategoria).ToList();
         }
     }
 }

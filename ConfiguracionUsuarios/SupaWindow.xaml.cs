@@ -244,6 +244,10 @@ namespace ConfiguracionUsuarios
                     usc = new ComponentesUserControl();
                     GridMain.Children.Add(usc);
                     break;
+                case "ProdModFall":
+                    usc = new ProdModFall();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
             }
