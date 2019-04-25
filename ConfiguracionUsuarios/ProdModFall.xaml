@@ -19,16 +19,12 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <!--#FF31577E-->
-                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="0">
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0">
                     <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                         <StackPanel Orientation="Horizontal">
-                            <ListViewItem x:Name="ItemConfiguration" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
                             <ListViewItem x:Name="ItemHome" Height="50">
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
@@ -38,56 +34,7 @@
                     </ListView>
                 </Grid>
 
-                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Margin="0">
-                    <ListView x:Name="ListViewMenu2" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                        <StackPanel Orientation="Horizontal">
-                            <ListViewItem x:Name="ItemConfiguration2" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                            <ListViewItem x:Name="ItemHome2" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                        </StackPanel>
-                    </ListView>
-                </Grid>
-
-                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Margin="0">
-                    <ListView x:Name="ListViewMenu3" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                        <StackPanel Orientation="Horizontal">
-                            <ListViewItem x:Name="ItemConfiguration3" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                            <ListViewItem x:Name="ItemHome3" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                        </StackPanel>
-                    </ListView>
-                </Grid>
-
-                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Margin="0">
-                    <ListView x:Name="ListViewMenu4" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                        <StackPanel Orientation="Horizontal">
-                            <ListViewItem x:Name="ItemConfiguration4" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                            <ListViewItem x:Name="ItemHome4" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
-                                </StackPanel>
-                            </ListViewItem>
-                        </StackPanel>
-                    </ListView>
-                </Grid>
+                
 
                 <Border BorderThickness="1" Grid.Row="1" Grid.Column="0" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
                     <Grid>
@@ -95,14 +42,14 @@
                             <RowDefinition Height="*" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <ListBox x:Name="Proli" FontFamily="Consolas" FontSize="14"/>
-                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                            <TextBlock Margin="16">PRODUCTO</TextBlock>
+                        <ListBox x:Name="Proli" FontFamily="Consolas" FontSize="14" Foreground="Black"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1">
+                            <TextBlock Margin="16">PRODUCTOS</TextBlock>
                         </materialDesign:ColorZone>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
                             <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
                         </Button>
                     </Grid>
@@ -117,12 +64,12 @@
                         </Grid.RowDefinitions>
                         <ListBox x:Name="Moli" FontFamily="Consolas" FontSize="14"/>
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                            <TextBlock Margin="16">MODELO</TextBlock>
+                            <TextBlock Margin="16">MODELOS</TextBlock>
                         </materialDesign:ColorZone>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
                             <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
                         </Button>
                     </Grid>
@@ -136,12 +83,12 @@
                         </Grid.RowDefinitions>
                         <ListBox x:Name="Cali" FontFamily="Consolas" FontSize="14"/>
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                            <TextBlock Margin="16">CATEGORIA</TextBlock>
+                            <TextBlock Margin="16">CATEGORIAS</TextBlock>
                         </materialDesign:ColorZone>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
                             <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
                         </Button>
                     </Grid>
@@ -155,12 +102,31 @@
                         </Grid.RowDefinitions>
                         <ListBox x:Name="Fall" FontFamily="Consolas" FontSize="14"/>
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                            <TextBlock Margin="16">FALLA</TextBlock>
+                            <TextBlock Margin="16">FALLAS</TextBlock>
                         </materialDesign:ColorZone>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="4" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="Ordenes" FontFamily="Consolas" FontSize="14"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                            <TextBlock Margin="16">ORDENES</TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
                             <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
                         </Button>
                     </Grid>

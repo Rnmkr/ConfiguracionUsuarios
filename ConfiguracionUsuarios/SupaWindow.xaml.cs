@@ -248,6 +248,14 @@ namespace ConfiguracionUsuarios
                     usc = new ProdModFall();
                     GridMain.Children.Add(usc);
                     break;
+                case "Insumos":
+                    usc = new InsumosView();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "Despacho":
+                    usc = new DespachoHardware();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
             }

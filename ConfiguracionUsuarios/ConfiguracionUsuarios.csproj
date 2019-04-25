@@ -102,6 +102,12 @@
     <Compile Include="DataAccessLayer\Tables\Usuario.cs" />
     <Compile Include="DataAccessLayer\Views\UsuarioView.cs" />
     <Compile Include="DataAccessLayer\Tables\Version.cs" />
+    <Compile Include="DespachoHardware.xaml.cs">
+      <DependentUpon>DespachoHardware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InsumosView.xaml.cs">
+      <DependentUpon>InsumosView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListaUsuarios.xaml.cs">
       <DependentUpon>ListaUsuarios.xaml</DependentUpon>
     </Compile>
@@ -122,6 +128,14 @@
       <DependentUpon>UserCard.xaml</DependentUpon>
     </Compile>
     <Page Include="ComponentesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DespachoHardware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InsumosView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
