@@ -28,6 +28,7 @@ namespace ConfiguracionUsuarios
             Proli.ItemsSource = context.Producto.Select(s => s.NombreProducto).ToList();
             Moli.ItemsSource = context.Modelo.Select(s => s.NombreModelo).ToList();
             Cali.ItemsSource = context.Categoria.Select(s => s.NombreCategoria).ToList();
+            Fall.ItemsSource = context.Falla.Select(s => s.DescripcionFalla).ToList();
         }
     }
 }

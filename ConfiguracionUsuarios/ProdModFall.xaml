@@ -18,8 +18,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Grid Background="#FF31577E" Grid.Row="0" Grid.ColumnSpan="3" Margin="0">
+                <!--#FF31577E-->
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="0">
                     <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                         <StackPanel Orientation="Horizontal">
                             <ListViewItem x:Name="ItemConfiguration" Height="50">
@@ -36,55 +38,138 @@
                     </ListView>
                 </Grid>
 
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Margin="0">
+                    <ListView x:Name="ListViewMenu2" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <ListViewItem x:Name="ItemConfiguration2" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem x:Name="ItemHome2" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                        </StackPanel>
+                    </ListView>
+                </Grid>
 
-                <GroupBox Header="Producto" Margin="16" Grid.Row="1" Grid.Column="0">
-                    <ListBox x:Name="Proli" FontFamily="Consolas" FontSize="14"/>
-                </GroupBox>
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Margin="0">
+                    <ListView x:Name="ListViewMenu3" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <ListViewItem x:Name="ItemConfiguration3" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem x:Name="ItemHome3" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                        </StackPanel>
+                    </ListView>
+                </Grid>
 
-                <GroupBox Header="Modelo" Margin="16" Grid.Row="1" Grid.Column="1">
-                    <ListBox x:Name="Moli" FontFamily="Consolas" FontSize="14"/>
-                </GroupBox>
+                <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Margin="0">
+                    <ListView x:Name="ListViewMenu4" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <ListViewItem x:Name="ItemConfiguration4" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="UserPlus" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem x:Name="ItemHome4" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Search" Height="25" Width="25" Margin="5"/>
+                                </StackPanel>
+                            </ListViewItem>
+                        </StackPanel>
+                    </ListView>
+                </Grid>
 
-                <GroupBox Header="Categoria" Margin="16" Grid.Row="1" Grid.Column="2">
-                    <ListBox x:Name="Cali" FontFamily="Consolas" FontSize="14"/>
-                </GroupBox>
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="0" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="Proli" FontFamily="Consolas" FontSize="14"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                            <TextBlock Margin="16">PRODUCTO</TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
+                    </Grid>
+                </Border>
 
-                <!--<DataGrid Name="dgComponentes" Grid.Column="0"  AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14"  ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Grid.Row="1">
-                    <DataGrid.Resources>
-                    </DataGrid.Resources>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="NOMBRE DEL PRODUCTO" Binding="{Binding ArticuloComponente}"/>
-                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreComponente}"/>
-                        <DataGridTextColumn Header="CATEGORIA" Binding="{Binding NombreCategoria}"/>
-                        <DataGridTextColumn Header="PRODUCTO" Binding="{Binding NombreProducto}"/>
-                        <DataGridTextColumn Header="MODELO" Binding="{Binding NombreModelo}"/>
-                        <DataGridTextColumn Header="VERSION" Binding="{Binding VersionComponente}"/>
-                        <DataGridTextColumn Header="ORDEN" Binding="{Binding CodigoOrden}"/>
-                    </DataGrid.Columns>
-                    <DataGrid.ContextMenu>
-                        <ContextMenu>
-                            <MenuItem x:Name="ctxmnuEditarusuario"  Header="Editar datos" InputGestureText="Ctrl+E">
-                                <MenuItem.Icon>
-                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
 
-                            <MenuItem x:Name="ctxmnuEditarPermisos"  Header="Ver Imagen" InputGestureText="Ctrl+E">
-                                <MenuItem.Icon>
-                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="1" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="Moli" FontFamily="Consolas" FontSize="14"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                            <TextBlock Margin="16">MODELO</TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
+                    </Grid>
+                </Border>
 
-                            <MenuItem x:Name="ctxmnuEditarusuario2"  Header="Duplicar..." InputGestureText="Ctrl+E">
-                                <MenuItem.Icon>
-                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="2" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="Cali" FontFamily="Consolas" FontSize="14"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                            <TextBlock Margin="16">CATEGORIA</TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
+                    </Grid>
+                </Border>
 
-                        </ContextMenu>
-                    </DataGrid.ContextMenu>
-                </DataGrid>-->
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="3" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="Fall" FontFamily="Consolas" FontSize="14"/>
+                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                            <TextBlock Margin="16">FALLA</TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
+                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
+                        </Button>
+                    </Grid>
+                </Border>
+
+
+
             </Grid>
+            
         </materialDesign:TransitioningContent>
     </Grid>
 </UserControl>
