@@ -116,18 +116,19 @@
     </Window.Triggers>
 
     <!--<Grid Background="#FFDEDEDE">-->
-    <Grid Name="maingrilla" Background="Transparent">
+    <materialDesign:DialogHost CloseOnClickAway="True" Identifier="openup">
+        <Grid Name="maingrilla" Background="Transparent">
 
 
-        <Grid x:Name="GridMain" Margin="50,0,0,0" HorizontalAlignment="Stretch" Background="Transparent"/>
-        <!--<Grid.ColumnDefinitions>
+            <Grid x:Name="GridMain" Margin="50,0,0,0" HorizontalAlignment="Stretch" Background="Transparent"/>
+            <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="79*"/>
             <ColumnDefinition Width="32*"/>
             <ColumnDefinition Width="631*"/>
         </Grid.ColumnDefinitions>-->
 
 
-        <!--<Grid Height="25" VerticalAlignment="Top" Background="#FF31577E">
+            <!--<Grid Height="25" VerticalAlignment="Top" Background="#FF31577E">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="0" Color="#FFACACAC"/>
             </Grid.Effect>
@@ -147,116 +148,116 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5C99D6" FontSize="16">ADMINISTRACION DE USUARIOS</TextBlock>
         </Grid>-->
 
-        <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="#FF31577E">
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="0" ShadowDepth="0" Color="#FFAEAEAE"/>
-            </Grid.Effect>
-            
-            <StackPanel>
-                <Grid Height="50" Background="White" RenderTransformOrigin="0.5,0.5">
-                    <Grid.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Grid.RenderTransform>
+            <Grid x:Name="GridMenu" Width="50" HorizontalAlignment="Left" Background="#FF31577E">
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="0" ShadowDepth="0" Color="#FFAEAEAE"/>
+                </Grid.Effect>
 
-                    <Button x:Name="ButtonOpenMenu" Height="36" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonOpenMenu_Click">
-                        <materialDesign:PackIcon Kind="Menu" Width="28" Height="28"/>
-                    </Button>
-                    <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="36" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonCloseMenu_Click">
-                        <materialDesign:PackIcon Kind="ArrowLeft" Width="28" Height="28"/>
-                    </Button>
-                    <!--<Image Height="80" VerticalAlignment="Bottom"/>-->
-                </Grid>
-                <Grid>
-                    <StackPanel Orientation="Horizontal" Background="LightGray">
+                <StackPanel>
+                    <Grid Height="50" Background="White" RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Grid.RenderTransform>
+
+                        <Button x:Name="ButtonOpenMenu" Height="36" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonOpenMenu_Click">
+                            <materialDesign:PackIcon Kind="Menu" Width="28" Height="28"/>
+                        </Button>
+                        <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="36" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonCloseMenu_Click">
+                            <materialDesign:PackIcon Kind="ArrowLeft" Width="28" Height="28"/>
+                        </Button>
+                        <!--<Image Height="80" VerticalAlignment="Bottom"/>-->
+                    </Grid>
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" Background="LightGray">
                             <materialDesign:PackIcon Kind="WbSunny" HorizontalAlignment="Left" Margin="5,0,0,0" Width="12"/>
                             <ToggleButton Height="12" Width="32" HorizontalAlignment="Left" Margin="0" Click="ToggleButton_Click"/>
                         </StackPanel>
-                    
-                </Grid>
 
-                <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                    </Grid>
 
-                    <ListViewItem x:Name="Login" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="LoginVariant" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Login" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="ItemCreate" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="FileDocument" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Pedidos" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="50" x:Name="Autorizaciones">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="CheckBox" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Autorizaciones" VerticalAlignment="Center"  Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
+                    <ListView x:Name="ListViewMenu" Height="{Binding ElementName=SupaWindows, Path=Height}" Foreground="#FF5C99D6" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
 
-                    <ListViewItem Height="50" x:Name="Linea">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Factory" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Producción" VerticalAlignment="Center"  Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="ItemHome" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Users" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="50" x:Name="ProdModFall">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Puzzle" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Componentes" VerticalAlignment="Center"  Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="Insumos" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="TicketConfirmation" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Insumos" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="Despacho" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ComputerClassic" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Hardware" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="Piezas" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Harddisk" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Piezas" VerticalAlignment="Center"  Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
+                        <ListViewItem x:Name="Login" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="LoginVariant" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Login" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemCreate" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="FileDocument" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Pedidos" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="50" x:Name="Autorizaciones">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="CheckBox" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Autorizaciones" VerticalAlignment="Center"  Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
 
-                    <ListViewItem x:Name="ItemHome2" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="FileDocumentBoxMultiple" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Registros" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
+                        <ListViewItem Height="50" x:Name="Linea">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Factory" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Producción" VerticalAlignment="Center"  Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemHome" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Users" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Usuarios" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="50" x:Name="ProdModFall">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Puzzle" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Componentes" VerticalAlignment="Center"  Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="Insumos" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="TicketConfirmation" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Insumos" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="Despacho" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="ComputerClassic" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Hardware" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="Piezas" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Harddisk" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Piezas" VerticalAlignment="Center"  Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
 
-
+                        <ListViewItem x:Name="ItemHome2" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="FileDocumentBoxMultiple" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Registros" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
 
 
-                    <ListViewItem x:Name="ItemHome3" Height="50">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ChartAreaspline" Height="25" Width="25" Margin="5"/>
-                            <TextBlock Text="Estadisticas" VerticalAlignment="Center" Margin="25 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    
-                    
-                    
-                    <!--</ListViewItem>
+
+
+                        <ListViewItem x:Name="ItemHome3" Height="50">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="ChartAreaspline" Height="25" Width="25" Margin="5"/>
+                                <TextBlock Text="Estadisticas" VerticalAlignment="Center" Margin="25 10"/>
+                            </StackPanel>
+                        </ListViewItem>
+
+
+
+                        <!--</ListViewItem>
                     <ListViewItem x:Name="ItemHome4" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ZipDisk" Height="25" Width="25" Margin="5"/>
@@ -269,7 +270,7 @@
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>-->
-                    <!--<ListViewItem x:Name="ItemHome6" Height="50">
+                        <!--<ListViewItem x:Name="ItemHome6" Height="50">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Golf" Height="25" Width="25" Margin="5"/>
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="25 10"/>
@@ -359,9 +360,10 @@
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="25 10"/>
                         </StackPanel>
                     </ListViewItem>-->
-                </ListView>
+                    </ListView>
 
-            </StackPanel>
+                </StackPanel>
+            </Grid>
         </Grid>
-    </Grid>
+    </materialDesign:DialogHost>
 </Window>

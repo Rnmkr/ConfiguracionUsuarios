@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ConfiguracionUsuarios.DataAccessLayer;
+using MaterialDesignThemes.Wpf;
 
 namespace ConfiguracionUsuarios
 {
@@ -30,6 +31,11 @@ namespace ConfiguracionUsuarios
             Cali.ItemsSource = context.Categoria.Select(s => s.NombreCategoria).ToList();
             Fall.ItemsSource = context.Falla.Select(s => s.DescripcionFalla).ToList();
             Ordenes.ItemsSource = context.Orden.Select(s => s.CodigoOrden).ToList();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var x = await DialogHost.Show(new ListaUsuarios(), "openup");
         }
     }
 }

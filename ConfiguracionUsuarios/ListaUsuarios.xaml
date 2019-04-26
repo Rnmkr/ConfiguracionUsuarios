@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Width="640" Height="480">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
             <Grid Name="mainGrid">
@@ -134,8 +134,9 @@
                         <!--PASSWORD-->
                         <DataGridCheckBoxColumn Header="PASSWORD" Binding="{Binding HashedPassword, TargetNullValue=false, FallbackValue=true}" IsReadOnly="True">
                             <DataGridCheckBoxColumn.ElementStyle>
-                                <Style TargetType="CheckBox">
+                                <Style TargetType="CheckBox" >
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <EventSetter Event="Click" Handler="CheckBox_Checked"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding HashedPassword}" Value="{x:Null}">
                                             <Setter Property="IsEnabled" Value="False"/>

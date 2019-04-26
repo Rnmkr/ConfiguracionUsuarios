@@ -28,73 +28,73 @@ namespace ConfiguracionUsuarios
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            btnLogin.IsEnabled = false;
-            using (new WaitCursor())
-            {
-                var _legajo = tbLegajo.Text;
-                var _password = pbContraseña.Password;
-                TryLoginAsync(_legajo, _password);
+        //private void btnLogin_Click(object sender, RoutedEventArgs e)
+        //{
+        //    btnLogin.IsEnabled = false;
+        //    using (new WaitCursor())
+        //    {
+        //        var _legajo = tbLegajo.Text;
+        //        var _password = pbContraseña.Password;
+        //        TryLoginAsync(_legajo, _password);
 
-                //mal todo mal eh, aprende de una vez que tenes que hacer la ventanita...
-            }
+        //        //mal todo mal eh, aprende de una vez que tenes que hacer la ventanita...
+        //    }
 
-            btnLogin.IsEnabled = true;
-        }
+        //    btnLogin.IsEnabled = true;
+        //}
 
-        private void TryLoginAsync(string legajo, string password)
-        {
+        //private void TryLoginAsync(string legajo, string password)
+        //{
 
 
 
-            if (string.IsNullOrWhiteSpace(legajo) || string.IsNullOrWhiteSpace(password))
-            {
-                return;
-            }
+        //    if (string.IsNullOrWhiteSpace(legajo) || string.IsNullOrWhiteSpace(password))
+        //    {
+        //        return;
+        //    }
 
-            if (legajo == "LEGAJO" || password == "--------")
-            {
-                return;
-            }
+        //    if (legajo == "LEGAJO" || password == "--------")
+        //    {
+        //        return;
+        //    }
 
-            if (ConnectionCheck.Success(StaticData.ServerHostName))
-            {
-                StaticData.DataBaseContext = new DBContext();
-                LoginValidation userValidation = new LoginValidation();
+        //    if (ConnectionCheck.Success(StaticData.ServerHostName))
+        //    {
+        //        StaticData.DataBaseContext = new DBContext();
+        //        LoginValidation userValidation = new LoginValidation();
 
-                if (userValidation.CanLogin(legajo, password, "LOGIN"))
-                {
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
-                    //Close();
-                }
-            }
+        //        if (userValidation.CanLogin(legajo, password, "LOGIN"))
+        //        {
+        //            MainWindow mainWindow = new MainWindow();
+        //            mainWindow.Show();
+        //            //Close();
+        //        }
+        //    }
 
-        }
+        //}
 
-        private void TbLegajo_GotFocus(object sender, RoutedEventArgs e)
-        {
-            tbLegajo.SelectAll();
-        }
+        //private void TbLegajo_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    tbLegajo.SelectAll();
+        //}
 
-        private void PbContraseña_GotFocus(object sender, RoutedEventArgs e)
-        {
-            pbContraseña.SelectAll();
-        }
+        //private void PbContraseña_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    pbContraseña.SelectAll();
+        //}
 
-        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == System.Windows.Input.Key.Enter)
-            {
-                return;
-            }
+        //private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        //{
+        //    if (e.Key == System.Windows.Input.Key.Enter)
+        //    {
+        //        return;
+        //    }
 
-            if (e.Key == System.Windows.Input.Key.Escape)
-            {
-                //Close();
-            }
-        }
+        //    if (e.Key == System.Windows.Input.Key.Escape)
+        //    {
+        //        //Close();
+        //    }
+        //}
 
 
     }

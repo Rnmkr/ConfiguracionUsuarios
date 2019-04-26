@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using ConfiguracionUsuarios.DataAccessLayer;
+using MaterialDesignThemes.Wpf;
 
 namespace ConfiguracionUsuarios
 {
@@ -148,6 +149,11 @@ namespace ConfiguracionUsuarios
                     ctxmnuEliminarUsuario.Header = "Dar de baja";
                 }
             }
+        }
+
+        private async void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            var x = await DialogHost.Show(new ListaUsuarios(), "openup");
         }
     }
 }

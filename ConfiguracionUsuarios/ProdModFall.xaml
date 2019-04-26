@@ -8,6 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="480" d:DesignWidth="720">
     <Grid>
+        
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.3}">
             <Grid Name="mainGrid">
                 <Grid.RowDefinitions>
@@ -43,13 +44,20 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ListBox x:Name="Proli" FontFamily="Consolas" FontSize="14" Foreground="Black"/>
+
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1">
                             <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">PRODUCTOS</TextBlock>
                         </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
+                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
+                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
+                        </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20" Click="Button_Click">
                             <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
                         </Button>
                     </Grid>
@@ -66,6 +74,12 @@
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
                             <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">MODELOS</TextBlock>
                         </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
+                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
+                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
+                        </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
@@ -85,6 +99,12 @@
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
                             <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">CATEGORIAS</TextBlock>
                         </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
+                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
+                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
+                        </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
@@ -104,6 +124,12 @@
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
                             <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">FALLAS</TextBlock>
                         </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
+                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
+                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
+                        </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
@@ -123,6 +149,12 @@
                         <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
                             <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">ORDENES</TextBlock>
                         </materialDesign:ColorZone>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
+                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
+                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
+                        </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
                             <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
                         </Button>
