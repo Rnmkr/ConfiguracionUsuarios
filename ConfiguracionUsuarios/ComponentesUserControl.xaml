@@ -33,9 +33,12 @@
                         </StackPanel>
                     </ListView>
                 </Grid>
-                <DataGrid Name="dgComponentes" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14"  ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
-                    <DataGrid.Resources>
-                    </DataGrid.Resources>
+                <DataGrid Name="dgComponentes" IsReadOnly="True" AutoGenerateColumns="False" FontFamily="Consolas" FontSize="14"  ColumnWidth="*" SelectionMode="Single" VerticalScrollBarVisibility="Visible" Margin="0" Padding="0,0,0,0" Grid.Row="1">
+                    <!--<DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Focusable" Value="False" />
+                        </Style>
+                    </DataGrid.Resources>-->
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ARTICULO" Binding="{Binding ArticuloComponente}"/>
                         <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreComponente}"/>
@@ -47,6 +50,13 @@
                     </DataGrid.Columns>
                     <DataGrid.ContextMenu>
                         <ContextMenu>
+
+                            <MenuItem x:Name="ctxmnuEditarusuarioxx"  Header="Relacionar..." InputGestureText="Ctrl+E">
+                                <MenuItem.Icon>
+                                    <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+
                             <MenuItem x:Name="ctxmnuEditarusuario"  Header="Editar datos" InputGestureText="Ctrl+E">
                                 <MenuItem.Icon>
                                     <Image Source="/ConfiguracionUsuarios;component/Resources/lapiz_16x16.ico"/>

@@ -20,7 +20,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
+
                 </Grid.ColumnDefinitions>
                 <!--#FF31577E-->
                 <Grid Background="#FF31577E" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0">
@@ -139,30 +139,7 @@
                     </Grid>
                 </Border>
 
-                <Border BorderThickness="1" Grid.Row="1" Grid.Column="4" Margin="16" BorderBrush="{DynamicResource PrimaryHueMidBrush}" ClipToBounds="True" HorizontalAlignment="Stretch">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ListBox x:Name="Ordenes" FontFamily="Consolas" FontSize="14"/>
-                        <materialDesign:ColorZone Mode="PrimaryMid" Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}">
-                            <TextBlock Margin="16" Style="{StaticResource MaterialDesignBody2TextBlock}">ORDENES</TextBlock>
-                        </materialDesign:ColorZone>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 169 -20">
-                            <materialDesign:PackIcon Kind="Search" Height="22" Width="22" />
-                        </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 122 -20">
-                            <materialDesign:PackIcon Kind="Bracket" Height="22" Width="22" />
-                        </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 75 -20">
-                            <materialDesign:PackIcon Kind="Pencil" Height="22" Width="22" />
-                        </Button>
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="0" Margin="0 0 28 -20">
-                            <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
-                        </Button>
-                    </Grid>
-                </Border>
+               
 
 
 

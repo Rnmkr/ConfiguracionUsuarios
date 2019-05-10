@@ -30,7 +30,7 @@ namespace ConfiguracionUsuarios
             Moli.ItemsSource = context.Modelo.Select(s => s.NombreModelo).ToList();
             Cali.ItemsSource = context.Categoria.Select(s => s.NombreCategoria).ToList();
             Fall.ItemsSource = context.Falla.Select(s => s.DescripcionFalla).ToList();
-            Ordenes.ItemsSource = context.Orden.Select(s => s.CodigoOrden).ToList();
+            //Ordenes.ItemsSource = context.Orden.Select(s => s.CodigoOrden).ToList();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
