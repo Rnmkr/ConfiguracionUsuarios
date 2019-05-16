@@ -41,7 +41,8 @@
                     </DataGrid.Resources>-->
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ARTICULO" Binding="{Binding ArticuloComponente}"/>
-                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreComponente}"/>
+                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreMarca}"/>
+                        <DataGridTextColumn Header="MODELO" Binding="{Binding ModeloComponente}"/>
                         <DataGridTextColumn Header="CATEGORIA" Binding="{Binding NombreCategoria}"/>
                         <DataGridTextColumn Header="PRODUCTO" Binding="{Binding NombreProducto}"/>
                         <DataGridTextColumn Header="MODELO" Binding="{Binding NombreModelo}"/>

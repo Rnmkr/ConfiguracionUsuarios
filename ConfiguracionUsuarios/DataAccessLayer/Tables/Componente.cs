@@ -22,15 +22,16 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [Key]
         public int IDComponente { get; set; }
 
-        public int FK_IDCategoria { get; set; }
-
         [Required]
         [StringLength(10)]
         public string ArticuloComponente { get; set; }
 
-        [Required]
+        public int FK_IDCategoria { get; set; }
+
+        public int? FK_IDMarca { get; set; }
+
         [StringLength(25)]
-        public string NombreComponente { get; set; }
+        public string ModeloComponente { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }

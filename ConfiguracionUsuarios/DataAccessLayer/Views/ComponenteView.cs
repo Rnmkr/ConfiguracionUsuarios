@@ -17,7 +17,10 @@ namespace ConfiguracionUsuarios.DataAccessLayer
         [Key]
         [Column(Order = 1)]
         [StringLength(25)]
-        public string NombreComponente { get; set; }
+        public string NombreMarca { get; set; }
+
+        [StringLength(25)]
+        public string ModeloComponente { get; set; }
 
         [Key]
         [Column(Order = 2)]

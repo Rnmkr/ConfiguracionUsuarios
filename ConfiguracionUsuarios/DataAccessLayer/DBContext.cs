@@ -7,11 +7,11 @@
 
     public partial class DBContext : DbContext
     {
+
         // "data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework";
         // "data source=DESKTOP;initial catalog=PRODUCCION;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
-
         public DBContext()
-            : base("data source=VM-FORREST;initial catalog=PRODUCCION;persist security info=True;user id=FORREST;password=12345678;MultipleActiveResultSets=True;App=EntityFramework")
+            : base("name=DBContext")
         {
         }
 
@@ -24,6 +24,7 @@
         public virtual DbSet<Falla> Falla { get; set; }
         public virtual DbSet<Imagen> Imagen { get; set; }
         public virtual DbSet<Insumo> Insumo { get; set; }
+        public virtual DbSet<Marca> Marca { get; set; }
         public virtual DbSet<Modelo> Modelo { get; set; }
         public virtual DbSet<Observacion> Observacion { get; set; }
         public virtual DbSet<Orden> Orden { get; set; }
@@ -37,10 +38,10 @@
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<PermisoUsuario> PermisoUsuario { get; set; }
         public virtual DbSet<Version> Version { get; set; }
+        public virtual DbSet<ComponenteView> ComponenteView { get; set; }
         public virtual DbSet<PedidoView> PedidoView { get; set; }
         public virtual DbSet<PermisoView> PermisoView { get; set; }
         public virtual DbSet<UsuarioView> UsuarioView { get; set; }
-        public virtual DbSet<ComponenteView> ComponenteView { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -83,7 +84,7 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Componente>()
-                .Property(e => e.NombreComponente)
+                .Property(e => e.ModeloComponente)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Componente>()
@@ -207,6 +208,10 @@
                 .Property(e => e.CoordenadaUbicacionInsumo)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Marca>()
+                .Property(e => e.NombreMarca)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Modelo>()
                 .Property(e => e.NombreModelo)
                 .IsUnicode(false);
@@ -317,6 +322,38 @@
                 .Property(e => e.VersionComponente)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.ArticuloComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.NombreMarca)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.ModeloComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.NombreCategoria)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.NombreProducto)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.NombreModelo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.VersionComponente)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ComponenteView>()
+                .Property(e => e.CodigoOrden)
+                .IsUnicode(false);
+
             modelBuilder.Entity<PedidoView>()
                 .Property(e => e.NumeroPedido)
                 .IsUnicode(false);
@@ -371,34 +408,6 @@
 
             modelBuilder.Entity<UsuarioView>()
                 .Property(e => e.HashedRFID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                 .Property(e => e.ArticuloComponente)
-                 .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.NombreComponente)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.NombreCategoria)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.NombreProducto)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.NombreModelo)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.VersionComponente)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ComponenteView>()
-                .Property(e => e.CodigoOrden)
                 .IsUnicode(false);
         }
     }
