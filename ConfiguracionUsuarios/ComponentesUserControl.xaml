@@ -41,12 +41,12 @@
                     </DataGrid.Resources>-->
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ARTICULO" Binding="{Binding ArticuloComponente}"/>
-                        <DataGridTextColumn Header="NOMBRE" Binding="{Binding NombreMarca}"/>
-                        <DataGridTextColumn Header="MODELO" Binding="{Binding ModeloComponente}"/>
                         <DataGridTextColumn Header="CATEGORIA" Binding="{Binding NombreCategoria}"/>
-                        <DataGridTextColumn Header="PRODUCTO" Binding="{Binding NombreProducto}"/>
-                        <DataGridTextColumn Header="MODELO" Binding="{Binding NombreModelo}"/>
+                        <DataGridTextColumn Header="MARCA" Binding="{Binding NombreMarca}"/>
+                        <DataGridTextColumn Header="MODELO HARDWARE" Binding="{Binding ModeloComponente}"/>
                         <DataGridTextColumn Header="VERSION" Binding="{Binding VersionComponente}"/>
+                        <DataGridTextColumn Header="PRODUCTO" Binding="{Binding NombreProducto}"/>
+                        <DataGridTextColumn Header="MODELO PRODUCTO" Binding="{Binding NombreModelo}"/>
                         <DataGridTextColumn Header="ORDEN" Binding="{Binding CodigoOrden}"/>
                     </DataGrid.Columns>
                     <DataGrid.ContextMenu>
